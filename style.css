@@ -35,6 +35,36 @@ footer#footer{
 	padding: 10px 0;
 }
 
+/* == MOBILE == */
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    }
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+    @media only screen and (max-width: 767px) {
+
+    }
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    }
+
 /* == MISC == */
 .remove-top{
 	margin-top: 0 !important;
@@ -54,6 +84,7 @@ footer#footer{
 
 .post-title, .page-title{
 	font-size: 28px;
+	line-height: 32px;
 }
 
 .post-title a{
