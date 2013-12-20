@@ -17,6 +17,11 @@ header#header{
 	margin-bottom: 15px;
 }
 
+.logo{
+	border: none;
+	text-decoration: none;
+}
+
 #main{
 	padding: 20px 0 40px;
 }
@@ -33,6 +38,12 @@ footer#footer{
 
 .meta{
 	padding: 10px 0;
+}
+
+.sidebar-widget{
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
 }
 
 /* == MOBILE == */
@@ -82,11 +93,10 @@ footer#footer{
 	margin-left: 15px;
 }
 
-.post-title, .page-title{
-	font-size: 28px;
-	line-height: 32px;
-}
-
 .post-title a{
 	text-decoration: none;
+}
+
+.search-field{
+	width: 100%;
 }

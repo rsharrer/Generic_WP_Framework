@@ -6,7 +6,7 @@
 		</div>
 
 		<div id="sidebar" class="one-third column omega">
-			Sidebar
+			<?php get_template_part( 'sidebar' ); ?>
 		</div>
 
 	</div>

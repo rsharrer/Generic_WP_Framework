@@ -32,7 +32,7 @@
 	<header id="header" class="container">
 		<div class="sixteen columns">
 			<div class="align-left">
-				<a href="<?php echo home_url(); ?>"><h1 class="remove-bottom remove-top" style="margin-top: 40px"><?php echo get_bloginfo('name');?></h1></a>
+				<a class="logo" href="<?php echo home_url(); ?>"><h1 class="remove-bottom remove-top" style="margin-top: 40px"><?php echo get_bloginfo('name');?></h1></a>
 				<h5><?php echo get_bloginfo('description');?></h5>
 			</div>
 		</div>
