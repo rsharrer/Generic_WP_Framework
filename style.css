@@ -2,14 +2,18 @@
 Theme Name: Generic Framework
 Theme URI: https://github.com/wycks/WP-Skeleton-Theme
 Author: Phil Hoyt
-Author URI: wpsecure.net
-Description: Responsive framework based on getskeleton.com, made for Child Themeing.
-Version: .1
+Author URI: https://github.com/philhoyt/Generic_WP_Framework.git
+Description: Responsive framework based on getskeleton.com, made for child themes.
+Version: .4
 License: http://www.opensource.org/licenses/mit-license.php.
 Tags: Responsive, grid, mobile, framework, bare-bones, white, minimal
 */
 
 /* == LAYOUT == */
+
+body{
+	word-wrap:break-word;
+}
 
 header#header{
 	border-bottom: 1px solid #DDDDDD;
@@ -46,36 +50,6 @@ footer#footer{
 	margin-bottom: 15px;
 }
 
-/* == MOBILE == */
-/* #Tablet (Portrait)
-================================================== */
-
-    /* Note: Design for a width of 768px */
-
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-
-    }
-
-
-/*  #Mobile (Portrait)
-================================================== */
-
-    /* Note: Design for a width of 320px */
-
-    @media only screen and (max-width: 767px) {
-
-    }
-
-
-/* #Mobile (Landscape)
-================================================== */
-
-    /* Note: Design for a width of 480px */
-
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
-
-    }
-
 /* == MISC == */
 .remove-top{
 	margin-top: 0 !important;
@@ -97,6 +71,19 @@ footer#footer{
 	text-decoration: none;
 }
 
+#content img, .wp-caption, .widget img{
+	max-width: 100%;
+	height: auto;
+}
+
+pre {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 .search-field{
-	width: 100%;
+	width: 98%;
 }

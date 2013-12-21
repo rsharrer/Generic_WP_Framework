@@ -5,7 +5,7 @@
 					<?php the_content(); ?>
 					<!--The Meta, Author, Date, Categories and Comments-->   
               		<div class="meta"> 
-                    	Date posted: <?php echo get_the_date(); ?>
+                    	Date posted: <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a>
                   		| Author: <?php the_author_posts_link(); ?>
                   		| <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
                   		<div>Categories: <?php the_category(' '); ?></div>
@@ -16,8 +16,8 @@
 			<?php endwhile; ?>
 
 				<div class="navigation">
-					<div class="next-posts"><?php next_posts_link(); ?></div>
-					<div class="prev-posts"><?php previous_posts_link(); ?></div>
+					<div class="next-posts align-right"><?php next_posts_link(); ?></div>
+					<div class="prev-posts aligh-left"><?php previous_posts_link(); ?></div>
 				</div>
 
 			<?php else : ?>
