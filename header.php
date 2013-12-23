@@ -36,4 +36,7 @@
 				<h5><?php echo get_bloginfo('description');?></h5>
 			</div>
 		</div>
+		<div id="primary_nav_wrap" class="sixteen columns">
+			<?php wp_nav_menu( array('theme_location' => 'primary_nav' , 'menu_id' => 'primary_nav' , 'fallback_cb' => 'fallback_menu' , 'container' => false )); ?>
+		</div>
 	</header>

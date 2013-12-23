@@ -50,7 +50,93 @@ footer#footer{
 	margin-bottom: 15px;
 }
 
+/* == MENU == */
+
+.responsive_menu select {
+	display: block;
+	width: 100%;
+	margin: 20px 0 0;
+}
+
+#primary_nav {
+	z-index: 1;
+	position: relative;
+}
+
+#primary_nav_wrap {margin-top: 15px;}
+
+#primary_nav_wrap a {
+	text-decoration: none;
+	color: #333;
+	font-weight: 800;
+	font-size: 12px;
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 15px;
+}
+
+#primary_nav_wrap ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#primary_nav_wrap ul li.current-menu-item {
+	background-color: #ddd;
+}
+
+#primary_nav_wrap > ul > li {
+	display: block;
+	float: left;
+	position: relative; 
+	margin-bottom: 0;
+}
+
+#primary_nav_wrap ul li:hover {
+	background: #f6f6f6;
+}
+
+#primary_nav_wrap > ul > li > ul { 
+	background-color: #fff;
+	position: absolute;
+	display: none;
+	border: 1px solid #eee;
+	top: 100%;
+	width: 200px;
+	z-index: 1;
+}
+
+#primary_nav_wrap > ul > li:hover > ul {
+	display: block;
+}
+
+#primary_nav_wrap > ul > li > ul > li {
+	position: relative;
+}
+
+#primary_nav_wrap > ul > li > ul > li  a{
+	height: auto;
+}
+
+#primary_nav_wrap > ul > li > ul > li > ul {
+	display:none;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	border: 1px solid #eee;
+	width: 200px;
+}
+
+#primary_nav_wrap > ul > li > ul > li:hover > ul {
+	display:block;
+	background-color: #fff;
+}
+
+#primary_nav_wrap > ul > li > ul > li > ul > li {  }
+
 /* == MISC == */
+
 .remove-top{
 	margin-top: 0 !important;
 }
@@ -87,3 +173,43 @@ pre {
 .search-field{
 	width: 98%;
 }
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    }
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+    @media only screen and (max-width: 767px) {
+
+.align-left{
+	display: block;
+	margin-right: 0px;
+	width: 100%;
+}
+
+.align-right{
+	display: block;
+	width: 100%;
+	margin-left: 0px;
+}
+
+    }
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+    }
