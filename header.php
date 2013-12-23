@@ -9,7 +9,6 @@
   ================================================== -->
 	<meta charset="utf-8">
 	<title><?php wp_title('|',true,'right'); ?><?php bloginfo('name'); ?></title>
-	<meta name="description" content="<?php bloginfo('description'); ?>">
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -35,7 +34,7 @@
 				<h5><?php echo get_bloginfo('description');?></h5>
 			</div>
 		</div>
-		<div id="primary_nav_wrap" class="sixteen columns">
+		<nav id="primary_nav_wrap" class="sixteen columns">
 			<?php wp_nav_menu( array('theme_location' => 'primary_nav' , 'menu_id' => 'primary_nav' , 'fallback_cb' => 'fallback_menu' , 'container' => false )); ?>
-		</div>
+		</nav>
 	</header>

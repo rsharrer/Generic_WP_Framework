@@ -1,6 +1,6 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					<?php the_content(); ?>
 					<div class="meta"> 
@@ -10,7 +10,7 @@
 						<div>Categories: <?php the_category(' '); ?></div>
 						<div>Tags: <?php the_tags( ' ' ); ?></div>
 					</div>
-				</div>
+				</article>
 
 			<?php endwhile; ?>
 

@@ -4,8 +4,9 @@ Theme URI: https://github.com/wycks/WP-Skeleton-Theme
 Author: Phil Hoyt
 Author URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Description: Responsive framework based on getskeleton.com, made for child themes.
-Version: .8
-License: http://www.opensource.org/licenses/mit-license.php.
+Version: 0.8.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: Responsive, grid, mobile, framework, bare-bones, white, minimal
 */
 
@@ -32,6 +33,7 @@ header#header{
 
 footer#footer{
 	border-top: 1px solid #DDDDDD;
+	font-size: 12px;
 	padding: 20px 0 40px;
 	margin-top: 15px;
 }
@@ -134,6 +136,22 @@ footer#footer{
 }
 
 #primary_nav_wrap > ul > li > ul > li > ul > li {  }
+
+#footer_menu ul{
+	margin: 0;
+}
+
+#footer_menu ul li{
+	display: inline;
+}
+
+#footer_menu ul li:after{
+	content: " | ";
+}
+
+#footer_menu ul li:last-child:after{
+	content: "";
+}
 
 /* == MISC == */
 
