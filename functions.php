@@ -26,7 +26,7 @@ function load_styles() {
 	wp_register_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js');
 	wp_register_script( 'resmenu', get_template_directory_uri() . '/js/jquery.resmenu.min.js');
 
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'skeleton-base', 'skeleton-style', 'skeleton-layout' ) );
 	wp_enqueue_style( 'skeleton-style' );
 	wp_enqueue_style( 'skeleton-base' );
 	wp_enqueue_style( 'skeleton-layout' );
