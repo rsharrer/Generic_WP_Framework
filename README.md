@@ -18,8 +18,4 @@ ___
 * Base 960 Grid 960px
 * Tablet (Portrait) 768px
 * Mobile (Portrait) 320px
-<<<<<<< HEAD
 * Mobile (Landscape) 480px
-=======
-* Mobile (Landscape) 480px
->>>>>>> 303e697d6507b7df3057a6eec8ce680b5d872bc9
