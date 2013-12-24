@@ -27,7 +27,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 	<header id="header" class="container">
 		<div class="sixteen columns">
 			<div class="align-left">
-				<a class="logo" href="<?php echo home_url(); ?>"><h1 class="remove-bottom remove-top" style="margin-top: 40px"><?php echo get_bloginfo('name');?></h1></a>
+				<a id="logo" href="<?php echo home_url(); ?>"><?php if(is_home() || is_front_page()) {?> <h1 class="remove-bottom remove-top"><?php bloginfo('name');?></h1> <?php } else { ?> <span class="remove-bottom remove-top"><?php bloginfo('name');?></span> <?php } ?></a>
 				<h5><?php echo get_bloginfo('description');?></h5>
 			</div>
 		</div>
