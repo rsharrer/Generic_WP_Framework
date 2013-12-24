@@ -1,13 +1,12 @@
 /*
 Theme Name: Generic Framework
-Theme URI: https://github.com/wycks/WP-Skeleton-Theme
+Theme URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Author: Phil Hoyt
 Author URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Description: Responsive framework based on getskeleton.com, made for child themes.
 Version: 0.8.6
 License: GPL
 License URI: http://www.opensource.org/licenses/gpl-license.php
-Tags: Responsive, grid, mobile, framework, bare-bones, white, minimal
 */
 
 /* == LAYOUT == */
@@ -180,21 +179,47 @@ footer#footer{
 	height: auto;
 }
 
+img.alignleft {
+	margin: 5px 20px 5px 0;
+}
+
 .alignleft {
 	float: left;
+}
+
+img.alignright {
+	margin: 5px 0 5px 20px;
 }
 
 .alignright {
 	float: right;
 }
 
-img.alignleft {
-	margin: 5px 20px 5px 0;
+img.aligncenter {
+	margin: 5px auto;
 }
 
-img.alignright {
-	margin: 5px 0 5px 20px;
+.gallery-caption {
+	text-align: center;
+	width: 100%;
 }
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption-text{
+	font-size: 12px;
+	font-style: italic;
+}
+
+.sticky .post-title a{
+	text-decoration: underline;
+}
+
+.bypostauthor{}
 
 pre {
 	white-space: pre-wrap;       /* css-3 */
@@ -202,6 +227,15 @@ pre {
 	white-space: -pre-wrap;      /* Opera 4-6 */
 	white-space: -o-pre-wrap;    /* Opera 7 */
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
 }
 
 .search-field{

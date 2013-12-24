@@ -18,7 +18,7 @@ function browser_body_class($classes) {
 }
 
 // GET ALL THE STYLES!
-function load_styles() {
+function load_theme_styles() {
 
 	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/stylesheets/skeleton.css');
 	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css');
@@ -34,7 +34,7 @@ function load_styles() {
 	wp_enqueue_script( 'resmenu' );
 
 }
-add_action('wp_enqueue_scripts', 'load_styles');
+add_action('wp_enqueue_scripts', 'load_theme_styles');
 
 //Making jQuery Google API
 function modify_jquery() {
@@ -52,6 +52,12 @@ add_filter( 'widget_text', 'do_shortcode' );
 
 // Featured Image Engaged
 add_theme_support('post-thumbnails');
+
+// RSS feed links
+add_theme_support( 'automatic-feed-links' );
+
+if ( ! isset( $content_width ) )
+	$content_width = 960;
 
 // Sidebar
 register_sidebar( array(
