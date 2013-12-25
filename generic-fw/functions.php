@@ -23,29 +23,22 @@ function load_theme_styles() {
 	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/stylesheets/skeleton.css');
 	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css');
 	wp_register_style( 'skeleton-layout', get_template_directory_uri() . '/stylesheets/layout.css');
+	wp_register_script( 'local_jquery', get_template_directory_uri() . '/js/jquery-2.0.3.min.js');
 	wp_register_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js');
 	wp_register_script( 'resmenu', get_template_directory_uri() . '/js/jquery.resmenu.min.js');
+	wp_register_script( 'js_features', get_template_directory_uri() . '/js/features.js');
 
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'skeleton-base', 'skeleton-style', 'skeleton-layout' ) );
 	wp_enqueue_style( 'skeleton-style' );
 	wp_enqueue_style( 'skeleton-base' );
 	wp_enqueue_style( 'skeleton-layout' );
+	wp_enqueue_script( 'local_jquery' );
 	wp_enqueue_script( 'fitvids' );
 	wp_enqueue_script( 'resmenu' );
+	wp_enqueue_script( 'js_features' , get_template_directory_uri() . '/js/features.js' , array(), '1.0.0', true);
 
 }
 add_action('wp_enqueue_scripts', 'load_theme_styles');
-
-//Making jQuery Google API
-function modify_jquery() {
-	if (!is_admin()) {
-		// comment out the next two lines to load the local copy of jQuery
-		wp_deregister_script('jquery');
-		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', false, '1.8.1');
-		wp_enqueue_script('jquery');
-	}
-}
-add_action('init', 'modify_jquery');
 
 // Make shortcodes with in widgets, because... that's annouying.
 add_filter( 'widget_text', 'do_shortcode' );

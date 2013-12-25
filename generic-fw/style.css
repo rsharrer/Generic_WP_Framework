@@ -22,11 +22,12 @@ header#header{
 	margin-bottom: 15px;
 }
 
-#logo {
+#logo, #logo h1 {
     font-size: 46px;
     line-height: 50px;
     margin-bottom: 14px;
     font-family: "Georgia","Times New Roman",serif;
+    text-decoration: none;
 }
 
 #main{
