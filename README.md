@@ -37,5 +37,5 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
 
 ##Dev Plans
 * Theme Layout Customization Options
-* Post Type Options
+* Post Format Options
 * Loosely Display Featured Images
