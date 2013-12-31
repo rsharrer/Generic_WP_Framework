@@ -3,12 +3,14 @@
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					<?php the_content(); ?>
-					<div class="meta"> 
-						Date posted: <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a>
-						| Author: <?php the_author_posts_link(); ?>
-						<?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
-						<div>Categories: <?php the_category(' '); ?></div>
-						<div>Tags: <?php the_tags( ' ' ); ?></div>
+					<div class="meta-info"> 
+						<div class="align-left">
+							By <?php the_author_posts_link(); ?> | 
+							<?php echo get_the_date(); ?> |
+							<?php the_category(', '); ?> | <?php the_tags( '', ', ', ' | ' ); ?>
+							<?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?>
+						</div>
+						<div class="align-right"><a href="<?php the_permalink(); ?>">Read More</a></div>
 					</div>
 				</article>
 

@@ -2,15 +2,17 @@
 
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<h1 class="page-title"><?php the_title(); ?></h1>
-					<div class="meta">
-						Date posted: <?php echo get_the_date(); ?>
-						| Author: <?php the_author_posts_link(); ?>
-						| <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
-						<div>Categories: <?php the_category(' '); ?></div>
-						<div>Tags: <?php the_tags( ' ' ); ?></div>
-					</div>
 					<?php the_content(); ?>
 					<?php wp_link_pages(); ?>
+
+					<div class="meta-info"> 
+						<div class="align-left">
+							By <?php the_author_posts_link(); ?> | 
+							<?php echo get_the_date(); ?> |
+							<?php the_category(', '); ?> | <?php the_tags( '', ', ', ' | ' ); ?>
+							<?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?>
+						</div>
+					</div>
 
 					<?php comments_template(); ?>
 				</article>
