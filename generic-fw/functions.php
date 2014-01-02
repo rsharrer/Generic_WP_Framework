@@ -47,8 +47,10 @@ function genericfw_setup(){
 add_filter( 'widget_text', 'do_shortcode' );
 
 // Sidebar
-add_action( 'widgets_init', function(){
-     register_sidebar( array(
+
+function genericframework_widgets_init() {
+
+	register_sidebar( array(
 	'name' => 'Sidebar',
 	'id' => 'main-sidebar',
 	'description' => 'Widgets for the main sidebar.',
@@ -57,7 +59,10 @@ add_action( 'widgets_init', function(){
 	'before_title' => '<h3 class="sidebar-title">',
 	'after_title' => '</h3>'
 	));
-});
+}
+add_action( 'widgets_init', 'genericframework_widgets_init' );
+
+
 
 add_action( 'init', 'register_my_menus' );
  
