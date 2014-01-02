@@ -6,7 +6,7 @@
 		</div>
 
 		<div id="sidebar" class="five columns">
-			<?php get_template_part( 'sidebar' ); ?>
+			<?php get_sidebar(); ?>
 		</div>
 
 	</div>

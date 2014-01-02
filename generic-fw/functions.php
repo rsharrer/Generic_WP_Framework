@@ -18,42 +18,37 @@ function browser_body_class($classes) {
 }
 
 // GET ALL THE STYLES!
+add_action('wp_enqueue_scripts', 'load_theme_styles');
 function load_theme_styles() {
 
 	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/stylesheets/skeleton.css');
 	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css');
 	wp_register_style( 'skeleton-layout', get_template_directory_uri() . '/stylesheets/layout.css');
-	wp_register_script( 'local_jquery', get_template_directory_uri() . '/js/jquery-2.0.3.min.js');
-	wp_register_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js');
-	wp_register_script( 'resmenu', get_template_directory_uri() . '/js/jquery.resmenu.min.js');
-	wp_register_script( 'js_features', get_template_directory_uri() . '/js/features.js');
 
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'skeleton-base', 'skeleton-style', 'skeleton-layout' ) );
 	wp_enqueue_style( 'skeleton-style' );
 	wp_enqueue_style( 'skeleton-base' );
 	wp_enqueue_style( 'skeleton-layout' );
-	wp_enqueue_script( 'local_jquery' );
-	wp_enqueue_script( 'fitvids' );
-	wp_enqueue_script( 'resmenu' );
-	wp_enqueue_script( 'js_features' , get_template_directory_uri() . '/js/features.js' , array(), '1.0.0', true);
+	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
+
+	wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '', TRUE); 
+	wp_enqueue_script('fitvids-settings', get_template_directory_uri() . '/js/FitVids.js', array(), '', TRUE);
 
 }
-add_action('wp_enqueue_scripts', 'load_theme_styles');
 
-// Make shortcodes with in widgets, because... that's annouying.
+add_action( 'after_setup_theme', 'genericfw_setup' );
+function genericfw_setup(){
+	if ( ! isset( $content_width ) ) $content_width = 960;
+	add_theme_support('post-thumbnails');
+	add_theme_support( 'automatic-feed-links' );
+}
+
+// Make shortcodes with in widgets, because
 add_filter( 'widget_text', 'do_shortcode' );
 
-// Featured Image Engaged
-add_theme_support('post-thumbnails');
-
-// RSS feed links
-add_theme_support( 'automatic-feed-links' );
-
-if ( ! isset( $content_width ) )
-	$content_width = 960;
-
 // Sidebar
-register_sidebar( array(
+add_action( 'widgets_init', function(){
+     register_sidebar( array(
 	'name' => 'Sidebar',
 	'id' => 'main-sidebar',
 	'description' => 'Widgets for the main sidebar.',
@@ -61,7 +56,8 @@ register_sidebar( array(
 	'after_widget'  => '</div>',
 	'before_title' => '<h3 class="sidebar-title">',
 	'after_title' => '</h3>'
-));
+	));
+});
 
 add_action( 'init', 'register_my_menus' );
  
