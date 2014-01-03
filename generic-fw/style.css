@@ -61,6 +61,8 @@ footer#footer{
 	margin-bottom: 15px;
 }
 
+.sidebar ul ul ul ul{ display: none;}
+
 #respond{
 	margin-top: 15px;
 }
@@ -138,7 +140,7 @@ footer#footer{
 	display:none;
 	position: absolute;
 	left: 100%;
-	top: 0;
+	top: -1px;
 	border: 1px solid #eee;
 	width: 200px;
 }
@@ -147,6 +149,8 @@ footer#footer{
 	display:block;
 	background-color: #fff;
 }
+
+#primary_nav_wrap > ul > li > ul > li > ul ul{display: none;}
 
 #primary_nav_wrap > ul > li > ul > li > ul > li {  }
 
@@ -250,6 +254,30 @@ pre {
 	white-space: -pre-wrap;      /* Opera 4-6 */
 	white-space: -o-pre-wrap;    /* Opera 7 */
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+table{
+	margin-bottom: 15px;
+}
+
+table, th, td{
+border: 1px solid #DDDDDD;
+}
+
+th, td{
+	padding: 4px 8px;
+}
+
+dl{
+	margin-bottom: 15px;
+}
+
+dt {
+	font-weight: bold;
+}
+dd {
+	background:none no-repeat left top;
+	padding-left: 50px;
 }
 
 .size-auto, 

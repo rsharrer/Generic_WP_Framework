@@ -18,8 +18,8 @@ function browser_body_class($classes) {
 }
 
 // GET ALL THE STYLES!
-add_action('wp_enqueue_scripts', 'load_theme_styles');
-function load_theme_styles() {
+add_action('wp_enqueue_scripts', 'genericfw_styles');
+function genericfw_styles() {
 
 	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/stylesheets/skeleton.css');
 	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css');
@@ -33,8 +33,11 @@ function load_theme_styles() {
 
 	wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '', TRUE); 
 	wp_enqueue_script('fitvids-settings', get_template_directory_uri() . '/js/FitVids.js', array(), '', TRUE);
-
 }
+
+add_action( 'wp_head', create_function( '',
+   'echo \'<!--[if lt IE 9]><script src="'.get_template_directory_uri().'/js/html5.js"></script><![endif]-->\';'
+) );
 
 add_action( 'after_setup_theme', 'genericfw_setup' );
 function genericfw_setup(){
@@ -48,7 +51,7 @@ add_filter( 'widget_text', 'do_shortcode' );
 
 // Sidebar
 
-function genericframework_widgets_init() {
+function genericfw_widgets() {
 
 	register_sidebar( array(
 	'name' => 'Sidebar',
@@ -60,17 +63,15 @@ function genericframework_widgets_init() {
 	'after_title' => '</h3>'
 	));
 }
-add_action( 'widgets_init', 'genericframework_widgets_init' );
+add_action( 'widgets_init', 'genericfw_widgets' );
 
-
-
-add_action( 'init', 'register_my_menus' );
- 
-function register_my_menus() {
+// Menus
+add_action( 'after_setup_theme', 'genericfw_menus' );
+function genericfw_menus() {
 	register_nav_menus(
 		array(
-			'primary_nav' => __( 'Primary Menu' ),
-			'footer_nav' => __( 'Footer Menu' )
+			'primary_nav' => ( 'Primary Menu' ),
+			'footer_nav' => ( 'Footer Menu' )
 		)
 	);
 }

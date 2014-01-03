@@ -12,15 +12,11 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title><?php wp_title('|',true,'right'); ?><?php bloginfo('name'); ?></title>
+	<title><?php wp_title('|',true,'right'); ?></title>
 
 	<!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 
 <?php wp_head(); ?>
 </head>

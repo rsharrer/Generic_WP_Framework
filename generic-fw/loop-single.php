@@ -13,7 +13,7 @@
 							<?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?>
 						</div>
 					</div>
-
+					<br class="clear" />
 					<?php comments_template(); ?>
 				</article>
 

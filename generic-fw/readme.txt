@@ -24,6 +24,10 @@ FITVIDS.JS - ​http://fitvidsjs.com/
 License: Released under the WTFPL license - http://sam.zoy.org/wtfpl/
 Copyright: Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
 
+HTML5 Shiv - http://code.google.com/p/html5shiv/
+License: Dual licensed under the MIT or GPL Version 2 licenses
+Copyright: @afarkas @jdalton @jon_neal @rem
+
 == Installation ==
 
 1. Upload the `generic-fw` folder to the `/wp-content/themes/` directory
