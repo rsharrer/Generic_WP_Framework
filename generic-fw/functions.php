@@ -57,9 +57,9 @@ function genericfw_widgets() {
 	'name' => 'Sidebar',
 	'id' => 'main-sidebar',
 	'description' => 'Widgets for the main sidebar.',
-	'before_widget' => '<div id="%1$s" class="sidebar-widget">',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget'  => '</div>',
-	'before_title' => '<h3 class="sidebar-title">',
+	'before_title' => '<h3 class="widget-title">',
 	'after_title' => '</h3>'
 	));
 }

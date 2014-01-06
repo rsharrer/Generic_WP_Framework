@@ -2,10 +2,6 @@ Generic_WP_Framework
 ====================
 A WordPress Framework for rapid child-theme development.
 
-___
-WARNING THIS IS STILL IN DEV DO NOT USE FOR PRODUCTION SITE YET... SOON!
-___
-
 ##Features
 * Responsive Layouts
 * Base 960 Grid 960px
@@ -30,12 +26,30 @@ Activate
 
 I personally recommend using a Child Theme as that is the best way to rapidly develop a custom Wordpress theme. Visit http://codex.wordpress.org/Child_Themes for more details 
 
-##Thanks to
-* Skeleton (http://www.getskeleton.com/)
-* ReSmenu v0.1 by Alessandro Benoit
-* FitVids 1.0.3
-
 ##Dev Plans
 * Theme Layout Customization Options
 * Post Format Options
 * Loosely Display Featured Images
+
+##Changelog
+* V:0.9.61
+ * Main Sidebar Widget - css class - "sidebar-widget" to "widget"
+ * Main Sidebar Widget Title - css class - "sidebar-title" to "widget-title"
+ * Page Template - css class - "page-title" to "post-title"
+ * Single Template - css class - "page-title" to "post-title"
+ * style.css organized a bit
+
+
+##### Generic Framework is built with the following resources: 
+
+Skeleton - ​http://www.getskeleton.com/
+License: Distributed under the terms of the open-source MIT license
+Copyright: Dave Gamache, https://github.com/dhg
+
+FITVIDS.JS - ​http://fitvidsjs.com/
+License: Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+Copyright: Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+
+HTML5 Shiv - http://code.google.com/p/html5shiv/
+License: Dual licensed under the MIT or GPL Version 2 licenses
+Copyright: @afarkas @jdalton @jon_neal @rem

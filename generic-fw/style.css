@@ -4,7 +4,7 @@ Theme URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Author: Phil Hoyt
 Author URI: https://philhoyt.com
 Description: Responsive framework based on getskeleton.com, made for child themes.
-Version: 0.9.60
+Version: 0.9.61
 License: GPL
 License URI: http://www.opensource.org/licenses/gpl-license.php
 Tags: responsive-layout, white, right-sidebar
@@ -16,29 +16,8 @@ body{
 	word-wrap:break-word;
 }
 
-header#header{
-	border-bottom: 1px solid #DDDDDD;
-	padding: 15px 0 20px;
-	margin-bottom: 15px;
-}
-
-#site-title, #site-title a {
-    font-size: 46px;
-    line-height: 50px;
-    margin-bottom: 14px;
-    font-family: "Georgia","Times New Roman",serif;
-    text-decoration: none;
-}
-
 #main{
 	padding: 20px 0 40px;
-}
-
-footer#footer{
-	border-top: 1px solid #DDDDDD;
-	font-size: 12px;
-	padding: 20px 0 40px;
-	margin-top: 15px;
 }
 
 .post{
@@ -65,6 +44,47 @@ footer#footer{
 
 #respond{
 	margin-top: 15px;
+}
+
+/* == HEADER ==*/
+
+header#header{
+	border-bottom: 1px solid #DDDDDD;
+	padding: 15px 0 20px;
+	margin-bottom: 15px;
+}
+
+#site-title, #site-title a {
+    font-size: 46px;
+    line-height: 50px;
+    margin-bottom: 14px;
+    font-family: "Georgia","Times New Roman",serif;
+    text-decoration: none;
+}
+
+/* == FOOTER ==*/
+
+footer#footer{
+	border-top: 1px solid #DDDDDD;
+	font-size: 12px;
+	padding: 20px 0 40px;
+	margin-top: 15px;
+}
+
+#footer_menu ul{
+	margin: 0;
+}
+
+#footer_menu ul li{
+	display: inline;
+}
+
+#footer_menu ul li:after{
+	content: " | ";
+}
+
+#footer_menu ul li:last-child:after{
+	content: "";
 }
 
 /* == MENU == */
@@ -154,22 +174,6 @@ footer#footer{
 
 #primary_nav_wrap > ul > li > ul > li > ul > li {  }
 
-#footer_menu ul{
-	margin: 0;
-}
-
-#footer_menu ul li{
-	display: inline;
-}
-
-#footer_menu ul li:after{
-	content: " | ";
-}
-
-#footer_menu ul li:last-child:after{
-	content: "";
-}
-
 /* == MISC == */
 
 .remove-top{
@@ -195,10 +199,6 @@ ul {
 
 #comment{
 	width: 100%;
-}
-
-.post-title a{
-	text-decoration: none;
 }
 
 #content img, .wp-caption, .widget img, #sidebar img{
@@ -240,6 +240,10 @@ img.aligncenter {
 .wp-caption-text{
 	font-size: 12px;
 	font-style: italic;
+}
+
+.post-title ,.post-title a{
+	text-decoration: none;
 }
 
 .sticky .post-title a{
