@@ -40,7 +40,7 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
  * style.css organized a bit
 
 
-##### Generic Framework is built with the following resources: 
+## Generic Framework is built with the following resources: 
 
 Skeleton - ​http://www.getskeleton.com/
 License: Distributed under the terms of the open-source MIT license
