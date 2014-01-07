@@ -32,11 +32,12 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
 * Loosely Display Featured Images
 
 ##Changelog
-* V:0.9.61
+* V:0.9.61 - 01/06/14
  * Main Sidebar Widget - css class - "sidebar-widget" to "widget"
  * Main Sidebar Widget Title - css class - "sidebar-title" to "widget-title"
  * Page Template - css class - "page-title" to "post-title"
  * Single Template - css class - "page-title" to "post-title"
+ * Editor Style Added for a more unified look
  * style.css organized a bit
 
 

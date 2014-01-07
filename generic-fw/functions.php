@@ -39,6 +39,11 @@ add_action( 'wp_head', create_function( '',
    'echo \'<!--[if lt IE 9]><script src="'.get_template_directory_uri().'/js/html5.js"></script><![endif]-->\';'
 ) );
 
+function genericfw_editor_styles() {
+    add_editor_style( 'stylesheets/editor-style.css' );
+}
+add_action( 'init', 'genericfw_editor_styles' );
+
 add_action( 'after_setup_theme', 'genericfw_setup' );
 function genericfw_setup(){
 	if ( ! isset( $content_width ) ) $content_width = 960;
