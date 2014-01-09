@@ -12,7 +12,6 @@
 							if( $disable_comments != '' ) {
 					        	switch ( $disable_comments ) {
 					            	case 'yes':
-					                	// Do nothing. The theme already aligns the logo to the left
 					                break;
 					            	case 'no':
 					            		comments_template();

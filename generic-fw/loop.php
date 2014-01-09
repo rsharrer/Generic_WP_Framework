@@ -9,7 +9,17 @@
 							By <?php the_author_posts_link(); ?> | 
 							<?php echo get_the_date(); ?> |
 							<?php the_category(', '); ?> | <?php the_tags( '', ', ', ' | ' ); ?>
-							<?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?>
+							<?php $disable_comments = get_theme_mod( 'genericfw_postcom' );
+								if( $disable_comments != '' ) {
+									switch ( $disable_comments ) {
+									case 'yes':
+									break;
+									case 'no':
+									comments_popup_link('0 Comments', '1 Comment', '% Comments');
+									break;
+									}
+								}
+							?>
 						</div>
 						<div class="align-right"><a href="<?php the_permalink(); ?>">Read More</a></div>
 					</div>
