@@ -24,8 +24,12 @@
 	<header id="header" class="container">
 		<div class="sixteen columns">
 			<div class="align-left">
-				<?php if(is_home() || is_front_page()) {?> <h1 class="remove-bottom remove-top" id="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name');?></a></h1> <?php } else { ?> <div id="site-title" class="remove-bottom remove-top"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name');?></a></div> <?php } ?>
-				<h5><?php echo get_bloginfo('description');?></h5>
+				<?php if ( get_theme_mod( 'genericfw_logo' ) ) : ?>
+					<?php if(is_home() || is_front_page()) {?> <h1 class="remove-bottom remove-top" id="site-title"><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'genericfw_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a></h1> <?php } else { ?> <div id="site-title" class="remove-bottom remove-top"><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'genericfw_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a></div> <?php } ?>
+				<?php else : ?>
+					<?php if(is_home() || is_front_page()) {?> <h1 class="remove-bottom remove-top" id="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name');?></a></h1> <?php } else { ?> <div id="site-title" class="remove-bottom remove-top"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name');?></a></div> <?php } ?>
+					<h5><?php echo get_bloginfo('description');?></h5>
+				<?php endif; ?>
 			</div>
 		</div>
 		<nav id="primary_nav_wrap" class="sixteen columns">

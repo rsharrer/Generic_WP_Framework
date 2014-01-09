@@ -51,6 +51,21 @@ function genericfw_setup(){
 	add_theme_support( 'automatic-feed-links' );
 }
 
+// Menus
+add_action( 'after_setup_theme', 'genericfw_menus' );
+function genericfw_menus() {
+	register_nav_menus(
+		array(
+			'primary_nav' => ( 'Primary Menu' ),
+			'footer_nav' => ( 'Footer Menu' )
+		)
+	);
+}
+
+function fallback_menu(){
+    echo 'Please assign a menu in the admin area.';
+}
+
 // Make shortcodes with in widgets, because
 add_filter( 'widget_text', 'do_shortcode' );
 
@@ -70,17 +85,20 @@ function genericfw_widgets() {
 }
 add_action( 'widgets_init', 'genericfw_widgets' );
 
-// Menus
-add_action( 'after_setup_theme', 'genericfw_menus' );
-function genericfw_menus() {
-	register_nav_menus(
-		array(
-			'primary_nav' => ( 'Primary Menu' ),
-			'footer_nav' => ( 'Footer Menu' )
-		)
-	);
-}
+// Theme Customizer
+function genericfw_theme_customizer( $wp_customize ) {
 
-function fallback_menu(){
-    echo 'Please assign a menu in the admin area.';
+    $wp_customize->add_section( 'genericfw_settings_section' , array(
+        'title'       => __( 'General Settings', 'genericfw' ),
+        'priority'    => 30,
+    ) );
+    $wp_customize->add_setting( 'genericfw_logo' );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'genericfw_logo', array(
+        'label'    => __( 'Upload Logo', 'genericfw' ),
+        'section'  => 'genericfw_settings_section',
+        'settings' => 'genericfw_logo',
+    ) ) );
+
 }
+add_action('customize_register', 'genericfw_theme_customizer');

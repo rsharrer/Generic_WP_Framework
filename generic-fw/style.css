@@ -57,9 +57,14 @@ header#header{
 #site-title, #site-title a {
     font-size: 46px;
     line-height: 50px;
-    margin-bottom: 14px;
     font-family: "Georgia","Times New Roman",serif;
     text-decoration: none;
+    display: block;
+}
+
+#site-title img{
+    max-width: 100%;
+    height: auto;
 }
 
 /* == FOOTER ==*/
