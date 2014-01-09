@@ -92,6 +92,8 @@ function genericfw_theme_customizer( $wp_customize ) {
         'title'       => __( 'General Settings', 'genericfw' ),
         'priority'    => 30,
     ) );
+
+    // Logo Upload
     $wp_customize->add_setting( 'genericfw_logo' );
 
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'genericfw_logo', array(
@@ -99,6 +101,48 @@ function genericfw_theme_customizer( $wp_customize ) {
         'section'  => 'genericfw_settings_section',
         'settings' => 'genericfw_logo',
     ) ) );
+
+    // Disable Page Comments
+    $wp_customize->add_setting(
+    'genericfw_pagecom',
+    array(
+        'default' => 'no',
+    )
+);
+ 
+	$wp_customize->add_control(
+    'genericfw_pagecom',
+    array(
+        'type' => 'radio',
+        'label' => 'Global Disable Page Comments',
+        'section' => 'genericfw_settings_section',
+        'choices' => array(
+            'yes' => 'Yes',
+            'no' => 'No',
+        ),
+    )
+);
+
+	// Disable Post Comments
+    $wp_customize->add_setting(
+    'genericfw_postcom',
+    array(
+        'default' => 'no',
+    )
+);
+ 
+	$wp_customize->add_control(
+    'genericfw_postcom',
+    array(
+        'type' => 'radio',
+        'label' => 'Global Disable Post Comments',
+        'section' => 'genericfw_settings_section',
+        'choices' => array(
+            'yes' => 'Yes',
+            'no' => 'No',
+        ),
+    )
+);
 
 }
 add_action('customize_register', 'genericfw_theme_customizer');

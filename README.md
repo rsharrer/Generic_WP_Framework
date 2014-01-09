@@ -39,6 +39,9 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
  * Single Template - css class - "page-title" to "post-title"
  * Editor Style Added for a more unified look
  * style.css organized a bit
+* V:0.9.65 01/09/14
+ * Theme Customizer Options - Upload Logo, Global Disable Page and/or Post Comments
+ * Minor CSS edits
 
 
 ### Generic Framework is built with the following resources: 

@@ -5,7 +5,22 @@
 					<?php the_content(); ?>
 					<?php wp_link_pages(); ?>
 					<br class="clear" />
-					<?php comments_template(); ?>
+					
+					<!-- Commments -->
+					<?php
+						$disable_comments = get_theme_mod( 'genericfw_pagecom' );
+							if( $disable_comments != '' ) {
+					        	switch ( $disable_comments ) {
+					            	case 'yes':
+					                	// Do nothing. The theme already aligns the logo to the left
+					                break;
+					            	case 'no':
+					            		comments_template();
+					                break;
+					        		}
+					    		}
+					?>
+
 				</article>
 
 			<?php endwhile; ?>
