@@ -8,13 +8,14 @@
 						<div class="align-left">
 							By <?php the_author_posts_link(); ?> | 
 							<?php echo get_the_date(); ?> |
-							<?php the_category(', '); ?> | <?php the_tags( '', ', ', ' | ' ); ?>
+							<?php the_category(', '); ?><?php the_tags( ' | ', ', ', ' | ' ); ?>
 							<?php $disable_comments = get_theme_mod( 'genericfw_postcom' );
 								if( $disable_comments != '' ) {
 									switch ( $disable_comments ) {
 									case 'yes':
 									break;
 									case 'no':
+									echo ' | ';
 									comments_popup_link('0 Comments', '1 Comment', '% Comments');
 									break;
 									}
