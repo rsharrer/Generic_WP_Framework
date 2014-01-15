@@ -4,7 +4,7 @@ Theme URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Author: Phil Hoyt
 Author URI: https://philhoyt.com
 Description: Responsive framework based on getskeleton.com, made for child themes.
-Version: 0.9.65
+Version: 0.9.70
 License: GPL
 License URI: http://www.opensource.org/licenses/gpl-license.php
 Tags: responsive-layout, white, right-sidebar, two-columns, theme-options, editor-style, full-width-template
@@ -114,7 +114,6 @@ footer#footer{
 	font-weight: 800;
 	font-size: 12px;
 	display: block;
-	height: 36px;
 	line-height: 36px;
 	padding: 0 15px;
 }
@@ -123,26 +122,27 @@ footer#footer{
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	position: relative;
 }
 
 #primary_nav_wrap ul li.current-menu-item {
 	background-color: #ddd;
 }
 
-#primary_nav_wrap > ul > li {
+#primary_nav_wrap ul li {
 	display: block;
 	float: left;
-	position: relative; 
 	margin-bottom: 0;
+	position:relative;
 }
 
 #primary_nav_wrap ul li:hover {
 	background: #f6f6f6;
 }
 
-#primary_nav_wrap > ul > li > ul { 
+#primary_nav_wrap ul ul { 
 	background-color: #fff;
-	position: absolute;
+	position: absolute; 
 	display: none;
 	border: 1px solid #eee;
 	top: 100%;
@@ -150,19 +150,16 @@ footer#footer{
 	z-index: 1;
 }
 
-#primary_nav_wrap > ul > li:hover > ul {
+#primary_nav_wrap ul li:hover ul {
 	display: block;
 }
 
-#primary_nav_wrap > ul > li > ul > li {
+#primary_nav_wrap ul ul li {
 	position: relative;
+	float:none;
 }
 
-#primary_nav_wrap > ul > li > ul > li  a{
-	height: auto;
-}
-
-#primary_nav_wrap > ul > li > ul > li > ul {
+#primary_nav_wrap ul ul ul {
 	display:none;
 	position: absolute;
 	left: 100%;
@@ -171,14 +168,9 @@ footer#footer{
 	width: 200px;
 }
 
-#primary_nav_wrap > ul > li > ul > li:hover > ul {
+#primary_nav_wrap ul ul li:hover ul {
 	display:block;
-	background-color: #fff;
 }
-
-#primary_nav_wrap > ul > li > ul > li > ul ul{display: none;}
-
-#primary_nav_wrap > ul > li > ul > li > ul > li {  }
 
 /* == MISC == */
 

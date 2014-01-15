@@ -42,6 +42,9 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
 * V:0.9.65 01/09/14
  * Theme Customizer Options - Upload Logo, Global Disable Page and/or Post Comments
  * Minor CSS edits
+* V:0.9.70 1/14/14
+ * Theme Customizer Options - Blog Display Excerpt or Full Content Option
+ * New CSS for Primary Navigation, it wasn't style agnostic enough for my taste. Now allows infinite amount of depth(don't be stupid about it though)
 
 
 ### Generic Framework is built with the following resources: 
