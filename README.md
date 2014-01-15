@@ -44,7 +44,9 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
  * Minor CSS edits
 * V:0.9.70 1/14/14
  * Theme Customizer Options - Blog Display Excerpt or Full Content Option
- * New CSS for Primary Navigation, it wasn't style agnostic enough for my taste. Now allows infinite amount of depth(don't be stupid about it though)
+ * New CSS for Primary Navigation, it wasn't style agnostic enough for my taste. Now allows infinite amount of depth
+* V:0.9.71 1/15/14
+ * Reverted Menu CSS back to previous version, will return to it another time.
 
 
 ### Generic Framework is built with the following resources: 
