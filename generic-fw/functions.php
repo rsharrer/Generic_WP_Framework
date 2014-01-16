@@ -140,7 +140,7 @@ function genericfw_theme_customizer( $wp_customize ) {
         ),
     )
 );
-
+    
     // Disable Page Comments
     $wp_customize->add_setting(
     'genericfw_pagecom',

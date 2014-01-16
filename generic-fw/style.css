@@ -4,7 +4,7 @@ Theme URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Author: Phil Hoyt
 Author URI: https://philhoyt.com
 Description: Responsive framework based on getskeleton.com, made for child themes.
-Version: 0.9.71
+Version: 0.9.75
 License: GPL
 License URI: http://www.opensource.org/licenses/gpl-license.php
 Tags: responsive-layout, white, right-sidebar, two-columns, theme-options, editor-style, full-width-template
@@ -169,7 +169,7 @@ footer#footer{
 
 #primary_nav_wrap ul ul ul
 {
-	top:0;
+	top:-1px;
 	left:100%;
 }
 

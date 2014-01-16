@@ -2,7 +2,20 @@
 
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<?php the_content(); ?>
+
+					<?php $fullorexc = get_theme_mod( 'genericfw_fullorexcerpt' );
+								if( $fullorexc != '' ) {
+									switch ( $fullorexc ) {
+									case 'full':
+									the_content();
+									break;
+									case 'excerpt':
+									the_excerpt();
+									break;
+									}
+								}
+					?>
+
 					<br class="clear" />
 					<div class="meta-info"> 
 						<div class="align-left">
