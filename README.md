@@ -4,16 +4,16 @@ A WordPress Framework for rapid child-theme development.
 
 ##Features
 * Responsive Layouts
-* Base 960 Grid 960px
-* Tablet (Portrait) 768px
-* Mobile (Portrait) 320px
-* Mobile (Landscape) 480px
+ * Base 960 Grid 960px
+ * Tablet (Portrait) 768px
+ * Mobile (Portrait) 320px
+ * Mobile (Landscape) 480px
 * Easy CSS Framework Scaffolding
 * Child Theme Ready
 * Style Agnostic - overwrite existing style with ease
-* Responsive Menu
+* Responsive Menu (coming soon)
 * Responsive Video embeds
-* Browser Detection Classses
+* Browser Detection 
 
 ##Installation
 ```

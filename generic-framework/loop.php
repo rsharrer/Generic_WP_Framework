@@ -14,6 +14,7 @@
 									break;
 									}
 								}
+								else{ the_content(); }
 					?>
 
 					<br class="clear" />
