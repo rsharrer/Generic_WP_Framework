@@ -50,6 +50,9 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
 * V:0.9.75 1/15/14
  * New CSS for Primary Navigation, works better than all previous versions!
  * Theme Customizer Option - Adjusted the loop to acually switch between full and excerpt
+* V:0.9.76
+ *Removed some cruft
+ *Renamed GitHub directories to the way WP outputs the zip
 
 
 ### Generic Framework is built with the following resources: 
