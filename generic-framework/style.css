@@ -4,14 +4,42 @@ Theme URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Author: Phil Hoyt
 Author URI: https://philhoyt.com
 Description: Responsive framework based on getskeleton.com, made for child themes.
-Version: 0.9.76
+Version: 0.9.78
 License: GPL
 License URI: http://www.opensource.org/licenses/gpl-license.php
 Tags: responsive-layout, white, right-sidebar, two-columns, theme-options, editor-style, full-width-template
 */
 
-/* == LAYOUT == */
+/* Table of Content
+==================================================
+	TYPOGRAPHY
+	LAYOUT
+	HEADER
+	FOOTER
+	MENU
+	TABLE
+	IMAGES
+	LIST
+	MISC
 
+/* ==  TYPOGRAPHY ==*/
+pre {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.post-title ,.post-title a{
+	text-decoration: none;
+}
+
+.sticky .post-title a{
+	text-decoration: underline;
+}
+
+/* == LAYOUT == */
 body{
 	word-wrap:break-word;
 }
@@ -94,12 +122,6 @@ footer#footer{
 }
 
 /* == MENU == */
-
-.responsive_menu select {
-	display: block;
-	width: 100%;
-	margin: 20px 0 0;
-}
 
 #primary_nav {
 	z-index: 1;
@@ -194,38 +216,32 @@ footer#footer{
 	content: "";
 }
 
-/* == MISC == */
-
-.remove-top{
-	margin-top: 0 !important;
+/* == TABLE == */
+table{
+	margin-bottom: 15px;
 }
 
-.align-left{
-	display: inline;
-	float: left;
-	margin-right: 15px;
+table, th, td{
+border: 1px solid #DDDDDD;
 }
 
-.align-right{
-	display: inline;
-	float: right;
-	margin-left: 15px;
+th, td{
+	padding: 4px 8px;
 }
 
-ul {
-    list-style: disc outside none;
-    margin-left: 30px;
+dl{
+	margin-bottom: 15px;
 }
 
-#comment{
-	width: 100%;
+dt {
+	font-weight: bold;
+}
+dd {
+	background:none no-repeat left top;
+	padding-left: 50px;
 }
 
-#content img, .wp-caption, .widget img, #sidebar img{
-	max-width: 100%;
-	height: auto;
-}
-
+/* == IMAGES == */
 img.alignleft {
 	margin: 5px 20px 5px 0;
 }
@@ -262,48 +278,6 @@ img.aligncenter {
 	font-style: italic;
 }
 
-.post-title ,.post-title a{
-	text-decoration: none;
-}
-
-.sticky .post-title a{
-	text-decoration: underline;
-}
-
-.bypostauthor{}
-
-pre {
-	white-space: pre-wrap;       /* css-3 */
-	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-	white-space: -pre-wrap;      /* Opera 4-6 */
-	white-space: -o-pre-wrap;    /* Opera 7 */
-	word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
-
-table{
-	margin-bottom: 15px;
-}
-
-table, th, td{
-border: 1px solid #DDDDDD;
-}
-
-th, td{
-	padding: 4px 8px;
-}
-
-dl{
-	margin-bottom: 15px;
-}
-
-dt {
-	font-weight: bold;
-}
-dd {
-	background:none no-repeat left top;
-	padding-left: 50px;
-}
-
 .size-auto, 
 .size-full,
 .size-large,
@@ -313,25 +287,41 @@ dd {
 	height: auto;
 }
 
-.search-field{
-	width: 98%;
+#content img, .wp-caption, .widget img, #sidebar img{
+	max-width: 100%;
+	height: auto;
 }
+
+/* == LIST ==*/
+ul {
+    list-style: disc outside none;
+    margin-left: 30px;
+}
+
+/* == MISC == */
+
+.remove-top{ margin-top: 0 !important; }
+.align-left{ display: inline; float: left; margin-right: 15px; }
+.align-right{ display: inline; float: right; margin-left: 15px; }
+
+#comment{ width: 100%; }
+
+.bypostauthor{}
+
+.search-field{ width: 98%; }
+
 
 /* #Tablet (Portrait)
 ================================================== */
 
     /* Note: Design for a width of 768px */
-
     @media only screen and (min-width: 768px) and (max-width: 959px) {
 
     }
 
-
 /*  #Mobile (Portrait)
 ================================================== */
-
     /* Note: Design for a width of 320px */
-
     @media only screen and (max-width: 767px) {
 
 .align-left{
@@ -346,11 +336,15 @@ dd {
 	margin-left: 0px;
 }
 
+.mobile-off{
+	display: none;
+	visibility: hidden;
+}
+
     }
 
 /* #Mobile (Landscape)
 ================================================== */
-
     /* Note: Design for a width of 480px */
 
     @media only screen and (min-width: 480px) and (max-width: 767px) {
