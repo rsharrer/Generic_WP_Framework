@@ -56,6 +56,9 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
 * V:0.9.78
  * Added "mobile-off" class to quickly remove elements from mobile devices
  * Organized Stylesheet more
+* V:0.9.80
+ * .btn classes have been added for quick buttons
+ * light CSS cleaning
 
 
 ### Generic Framework is built with the following resources: 

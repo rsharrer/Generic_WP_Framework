@@ -4,7 +4,7 @@ Theme URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Author: Phil Hoyt
 Author URI: https://philhoyt.com
 Description: Responsive framework based on getskeleton.com, made for child themes.
-Version: 0.9.78
+Version: 0.9.80
 License: GPL
 License URI: http://www.opensource.org/licenses/gpl-license.php
 Tags: responsive-layout, white, right-sidebar, two-columns, theme-options, editor-style, full-width-template
@@ -288,10 +288,107 @@ img.aligncenter {
 	height: auto;
 }
 
-/* == LIST ==*/
+/* == LIST == */
 ul {
     list-style: disc outside none;
     margin-left: 30px;
+}
+
+/* == UI == */
+
+a.btn{
+  text-decoration:none;
+  color:#333333;
+  font-size:12px;
+  font-weight:bold;
+  font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.btn{
+  padding:0 15px;
+  line-height:32px;
+  text-align:center;
+  display:inline-block;
+  background:#F6F6F6;
+}
+
+.btn.red{
+  background:#E53C38;
+}
+
+.btn.red:hover{
+  background:#ea6360;
+}
+
+.btn.orange{
+  background:#FF8A3C;
+}
+
+.btn.orange:hover{
+  background:#ffa163;
+}
+
+.btn.yellow{
+  background:#FFF852;
+}
+
+.btn.yellow:hover{
+  background:#fff975;
+}
+
+.btn.green{
+  background:#4BC94D;
+}
+
+.btn.green:hover{
+  background:#6fd471;
+}
+
+.btn.blue{
+  background:#5DADE2;
+}
+
+.btn.blue:hover{
+  background:#7dbde8;
+}
+
+.btn:hover{
+  background:#DDDDDD;
+}
+
+.btn.round{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn-group > .btn.round:not(:first-child):not(:last-child){
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn-group > .btn.round:first-child{
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn.round:last-child{
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-group .btn + .btn{
+  border-left: 1px solid rgba(0, 0, 0, .1);
+  margin-left:-1px;
 }
 
 /* == MISC == */
