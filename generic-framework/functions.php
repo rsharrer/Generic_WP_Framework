@@ -63,7 +63,7 @@ function genericfw_menus() {
 }
 
 function fallback_menu(){
-    if ( is_user_logged_in() ) {echo '<p>Please assign a menu in the admin area.<p>';}
+    if ( is_user_logged_in() ) {echo 'Please assign a menu in the admin area.';}
 }
 
 // Make shortcodes with in widgets
