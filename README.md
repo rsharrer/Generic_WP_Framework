@@ -63,6 +63,7 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
  * remove-top, add-top, half-top classes added
 * V:0.9.83
  * Change content and sidebar column widths through Theme Customizer
+ * Add custom classes to sidebar and content area
  * .button and submit input styled to resemble the Generic Framework style
  * Added normalize.css for better cross browser support
 

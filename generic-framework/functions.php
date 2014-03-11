@@ -94,6 +94,12 @@ function genericfw_theme_customizer( $wp_customize ) {
 		'priority'    => 30,
 		) );
 
+	$wp_customize->add_section( 'genericfw_layout_section' , array(
+	'title'       => __( 'Layout Settings', 'genericfw' ),
+	'priority'    => 30,
+	'description' => 'Content plus Sidebar should equal 16',
+	) );
+
 	// Logo Upload
 	$wp_customize->add_setting( 'genericfw_logo' );
 
@@ -166,6 +172,8 @@ function genericfw_theme_customizer( $wp_customize ) {
 			)
 		);
 
+//LAYOUT OPTIONS
+
 	// Content Width
 	$wp_customize->add_setting(
 		'genericfw_contentwidth',
@@ -179,7 +187,7 @@ function genericfw_theme_customizer( $wp_customize ) {
 		array(
 		'settings' => 'genericfw_contentwidth',
 		'label' => 'Content width in columns:',
-		'section' => 'genericfw_settings_section',
+		'section' => 'genericfw_layout_section',
 		'type' => 'select',
 		'choices' => array(
 			'one' => 'One',
@@ -200,6 +208,18 @@ function genericfw_theme_customizer( $wp_customize ) {
 			'sixteen' => 'Sixteen',
 			),
 		));
+
+// Content Custom Classes
+$wp_customize->add_setting('genericfw_customcontentclass', array(
+'default' => '',
+'capability' => 'edit_theme_options',
+));
+ 
+$wp_customize->add_control('genericfw_customcontentclass', array(
+'label' => __('Add custom Class(es) to #content div', 'genericfw'),
+'section' => 'genericfw_layout_section',
+'settings' => 'genericfw_customcontentclass',
+));
 
 	// Sidebar Width
 	$wp_customize->add_setting(
@@ -214,7 +234,7 @@ function genericfw_theme_customizer( $wp_customize ) {
 		array(
 		'settings' => 'genericfw_sidebarwidth',
 		'label' => 'Sidebar width in columns:',
-		'section' => 'genericfw_settings_section',
+		'section' => 'genericfw_layout_section',
 		'type' => 'select',
 		'choices' => array(
 			'one' => 'One',
@@ -235,6 +255,18 @@ function genericfw_theme_customizer( $wp_customize ) {
 			'sixteen' => 'Sixteen',
 			),
 		));
+
+// Text Input
+$wp_customize->add_setting('genericfw_customsidebarclass', array(
+'default' => '',
+'capability' => 'edit_theme_options',
+));
+ 
+$wp_customize->add_control('genericfw_customsidebarclass', array(
+'label' => __('Add custom Class(es) to #sidebar div', 'genericfw'),
+'section' => 'genericfw_layout_section',
+'settings' => 'genericfw_customsidebarclass',
+));
 
 }
 add_action('customize_register', 'genericfw_theme_customizer');
