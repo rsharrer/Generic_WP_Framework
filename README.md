@@ -59,7 +59,12 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
 * V:0.9.80
  * .btn classes have been added for quick buttons
  * light CSS cleaning
-
+ * alpha and omega classes added to align-right and align-left
+ * remove-top, add-top, half-top classes added
+* V:0.9.83
+ * Change content and sidebar column widths through Theme Customizer
+ * .button and submit input styled to resemble the Generic Framework style
+ * Added normalize.css for better cross browser support
 
 ### Generic Framework is built with the following resources: 
 

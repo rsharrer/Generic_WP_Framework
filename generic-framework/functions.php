@@ -21,11 +21,13 @@ function browser_body_class($classes) {
 add_action('wp_enqueue_scripts', 'genericfw_styles');
 function genericfw_styles() {
 
-	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/stylesheets/skeleton.css');
-	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css');
-	wp_register_style( 'skeleton-layout', get_template_directory_uri() . '/stylesheets/layout.css');
+	wp_register_style( 'normalize', get_template_directory_uri() . '/stylesheets/normalize.css', '', '3.0.0' );
+	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/stylesheets/skeleton.css', '', '1.2');
+	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css' , '', '1.2');
+	wp_register_style( 'skeleton-layout', get_template_directory_uri() . '/stylesheets/layout.css' , '', '1.2');
 
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'skeleton-base', 'skeleton-style', 'skeleton-layout' ) );
+	wp_enqueue_style( 'normalize' );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'skeleton-base', 'skeleton-style', 'skeleton-layout' ), '0.9.80' );
 	wp_enqueue_style( 'skeleton-style' );
 	wp_enqueue_style( 'skeleton-base' );
 	wp_enqueue_style( 'skeleton-layout' );
@@ -40,7 +42,7 @@ add_action( 'wp_head', create_function( '',
 ) );
 
 function genericfw_editor_styles() {
-    add_editor_style( 'stylesheets/editor-style.css' );
+	add_editor_style( 'stylesheets/editor-style.css' );
 }
 add_action( 'init', 'genericfw_editor_styles' );
 
@@ -63,7 +65,7 @@ function genericfw_menus() {
 }
 
 function fallback_menu(){
-    if ( is_user_logged_in() ) {echo 'Please assign a menu in the admin area.';}
+	if ( is_user_logged_in() ) {echo 'Please assign a menu in the admin area.';}
 }
 
 // Make shortcodes with in widgets
@@ -87,82 +89,152 @@ add_action( 'widgets_init', 'genericfw_widgets' );
 // Theme Customizer
 function genericfw_theme_customizer( $wp_customize ) {
 
-    $wp_customize->add_section( 'genericfw_settings_section' , array(
-        'title'       => __( 'General Settings', 'genericfw' ),
-        'priority'    => 30,
-    ) );
+	$wp_customize->add_section( 'genericfw_settings_section' , array(
+		'title'       => __( 'General Settings', 'genericfw' ),
+		'priority'    => 30,
+		) );
 
-    // Logo Upload
-    $wp_customize->add_setting( 'genericfw_logo' );
+	// Logo Upload
+	$wp_customize->add_setting( 'genericfw_logo' );
 
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'genericfw_logo', array(
-        'label'    => __( 'Upload Logo', 'genericfw' ),
-        'section'  => 'genericfw_settings_section',
-        'settings' => 'genericfw_logo',
-    ) ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'genericfw_logo', array(
+		'label'    => __( 'Upload Logo', 'genericfw' ),
+		'section'  => 'genericfw_settings_section',
+		'settings' => 'genericfw_logo',
+		) ) );
 
-    // Full Content Or Post Excerpt
-    $wp_customize->add_setting(
-    'genericfw_fullorexcerpt',
-    array(
-        'default' => 'full',
-    )
-);
- 
-    $wp_customize->add_control(
-    'genericfw_fullorexcerpt',
-    array(
-        'type' => 'radio',
-        'label' => 'Full or Excerpt on Blog Display',
-        'section' => 'genericfw_settings_section',
-        'choices' => array(
-            'full' => 'Full Post',
-            'excerpt' => 'Excerpt',
-        ),
-    )
-);
-    
-    // Disable Page Comments
-    $wp_customize->add_setting(
-    'genericfw_pagecom',
-    array(
-        'default' => 'no',
-    )
-);
- 
+	// Full Content Or Post Excerpt
+	$wp_customize->add_setting(
+		'genericfw_fullorexcerpt',
+		array(
+			'default' => 'full',
+			)
+		);
+	
 	$wp_customize->add_control(
-    'genericfw_pagecom',
-    array(
-        'type' => 'radio',
-        'label' => 'Global Disable Page Comments',
-        'section' => 'genericfw_settings_section',
-        'choices' => array(
-            'yes' => 'Yes',
-            'no' => 'No',
-        ),
-    )
-);
+		'genericfw_fullorexcerpt',
+		array(
+			'type' => 'radio',
+			'label' => 'Full or Excerpt on Blog Display',
+			'section' => 'genericfw_settings_section',
+			'choices' => array(
+				'full' => 'Full Post',
+				'excerpt' => 'Excerpt',
+				),
+			)
+		);
+	
+	// Disable Page Comments
+	$wp_customize->add_setting(
+		'genericfw_pagecom',
+		array(
+			'default' => 'no',
+			)
+		);
+	
+	$wp_customize->add_control(
+		'genericfw_pagecom',
+		array(
+			'type' => 'radio',
+			'label' => 'Global Disable Page Comments',
+			'section' => 'genericfw_settings_section',
+			'choices' => array(
+				'yes' => 'Yes',
+				'no' => 'No',
+				),
+			)
+		);
 
 	// Disable Post Comments
-    $wp_customize->add_setting(
-    'genericfw_postcom',
-    array(
-        'default' => 'no',
-    )
-);
- 
+	$wp_customize->add_setting(
+		'genericfw_postcom',
+		array(
+			'default' => 'no',
+			)
+		);
+	
 	$wp_customize->add_control(
-    'genericfw_postcom',
-    array(
-        'type' => 'radio',
-        'label' => 'Global Disable Post Comments',
-        'section' => 'genericfw_settings_section',
-        'choices' => array(
-            'yes' => 'Yes',
-            'no' => 'No',
-        ),
-    )
-);
+		'genericfw_postcom',
+		array(
+			'type' => 'radio',
+			'label' => 'Global Disable Post Comments',
+			'section' => 'genericfw_settings_section',
+			'choices' => array(
+				'yes' => 'Yes',
+				'no' => 'No',
+				),
+			)
+		);
+
+	// Content Width
+	$wp_customize->add_setting(
+		'genericfw_contentwidth',
+		array(
+		'default' => 'eleven',
+		'capability' => 'edit_theme_options',
+		));
+
+	$wp_customize->add_control( 
+		'genericfw_contentwidth',
+		array(
+		'settings' => 'genericfw_contentwidth',
+		'label' => 'Content width in columns:',
+		'section' => 'genericfw_settings_section',
+		'type' => 'select',
+		'choices' => array(
+			'one' => 'One',
+			'two' => 'Two',
+			'three' => 'Three',
+			'four' => 'Four',
+			'five' => 'Five',
+			'six' => 'Six',
+			'seven' => 'Seven',
+			'eight' => 'Eight',
+			'nine' => 'Nine',
+			'ten' => 'Ten',
+			'eleven' => 'Eleven',
+			'twelve' => 'Twelve',
+			'thirteen' => 'Thirteen',
+			'fourteen' => 'Fourteen',
+			'fifteen' => 'Fifteen',
+			'sixteen' => 'Sixteen',
+			),
+		));
+
+	// Sidebar Width
+	$wp_customize->add_setting(
+		'genericfw_sidebarwidth',
+		array(
+		'default' => 'five',
+		'capability' => 'edit_theme_options',
+		));
+
+	$wp_customize->add_control( 
+		'genericfw_sidebarwidth',
+		array(
+		'settings' => 'genericfw_sidebarwidth',
+		'label' => 'Sidebar width in columns:',
+		'section' => 'genericfw_settings_section',
+		'type' => 'select',
+		'choices' => array(
+			'one' => 'One',
+			'two' => 'Two',
+			'three' => 'Three',
+			'four' => 'Four',
+			'five' => 'Five',
+			'six' => 'Six',
+			'seven' => 'Seven',
+			'eight' => 'Eight',
+			'nine' => 'Nine',
+			'ten' => 'Ten',
+			'eleven' => 'Eleven',
+			'twelve' => 'Twelve',
+			'thirteen' => 'Thirteen',
+			'fourteen' => 'Fourteen',
+			'fifteen' => 'Fifteen',
+			'sixteen' => 'Sixteen',
+			),
+		));
 
 }
 add_action('customize_register', 'genericfw_theme_customizer');

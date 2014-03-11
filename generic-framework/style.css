@@ -4,7 +4,7 @@ Theme URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Author: Phil Hoyt
 Author URI: https://philhoyt.com
 Description: Responsive framework based on getskeleton.com, made for child themes.
-Version: 0.9.80
+Version: 0.9.83
 License: GPL
 License URI: http://www.opensource.org/licenses/gpl-license.php
 Tags: responsive-layout, white, right-sidebar, two-columns, theme-options, editor-style, full-width-template
@@ -304,6 +304,7 @@ ul {
 	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 	padding:0 15px;
 	line-height:32px;
+  height: 32px;
 	display:inline-block;
 	text-align:center;
 	background-color:#DDDDDD;
@@ -388,6 +389,66 @@ ul {
 	margin-left:-1px;
 }
 
+  .button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    background: #DDDDDD;
+    border: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: none;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    line-height: 32px;
+    height: 32px;
+    padding: 0px 15px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+  .button:hover,
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover {
+    color: #333;
+    background: #F6F6F6;
+    border: none;
+}
+
+  .button:active,
+  button:active,
+  input[type="submit"]:active,
+  input[type="reset"]:active,
+  input[type="button"]:active {
+    border: none;
+    background:#F6F6F6;
+    }
+
+  .button.full-width,
+  button.full-width,
+  input[type="submit"].full-width,
+  input[type="reset"].full-width,
+  input[type="button"].full-width {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center; }
+
+  /* Fix for odd Mozilla border & padding issues */
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
 /* == MISC == */
 
 .remove-top{margin-top: 0 !important;}
@@ -396,6 +457,8 @@ ul {
 .remove-top{ margin-top: 0 !important; }
 .align-left{ display: inline; float: left; margin-right: 15px; }
 .align-right{ display: inline; float: right; margin-left: 15px; }
+.alpha.align-left{ margin-right: 0;}
+.omega.align-right{ margin-left: 0;}
 
 #comment{ width: 100%; }
 

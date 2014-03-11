@@ -28,6 +28,9 @@ HTML5 Shiv - http://code.google.com/p/html5shiv/
 License: Dual licensed under the MIT or GPL Version 2 licenses
 Copyright: @afarkas @jdalton @jon_neal @rem
 
+normalize.css v3.0.0 - http://git.io/normalize/
+License: MIT License
+
 == Installation ==
 
 1. Upload the `generic-fw` folder to the `/wp-content/themes/` directory
