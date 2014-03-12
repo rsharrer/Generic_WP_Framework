@@ -302,8 +302,8 @@ ul {
 	font-size:12px;
 	font-weight:bold;
 	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-	padding:0 15px;
-	line-height:32px;
+	padding:10px 15px;
+	line-height:100% !important;
   height: auto;
 	display:inline-block;
 	text-align:center;
@@ -408,9 +408,8 @@ ul {
     text-align: center;
     cursor: pointer;
     margin-bottom: 20px;
-    line-height: 32px;
-    height: auto;
-    padding: 0px 15px;
+    line-height: 100% !important;
+    padding: 9px 15px;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
   .button:hover,
