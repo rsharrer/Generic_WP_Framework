@@ -330,8 +330,13 @@ article .btn{
 }
 
 .btn .genericon {
-	font-size: 22px;
+	font-size: 24px;
+	line-height: 32px;
 	width: auto;
+}
+
+.btn i.genericon{
+	line-height: 100%;
 }
 
 .btn.red{
