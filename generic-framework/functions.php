@@ -78,7 +78,7 @@ function genericfw_btnshortcode($atts, $content = null) {
 		"type"  => '',
 		"color" => '',
 		), $atts));
-	return '<a href="'.$link.'" class="btn '.$color.' '.$type.'">'.$content.'</a>';
+	return '<a href="'.$link.'" class="btn '.$color.' '.$type.'">'.do_shortcode($content).'</a>';
 }
 add_shortcode("btn", "genericfw_btnshortcode");
 
