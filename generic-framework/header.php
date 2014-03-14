@@ -21,7 +21,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<header id="header" class="container">
+	<div id="header" class="container">
 		<div class="sixteen columns">
 			<div class="align-left">
 				<?php if ( get_theme_mod( 'genericfw_logo' ) ) : ?>
@@ -32,7 +32,7 @@
 				<?php endif; ?>
 			</div>
 		</div>
-		<nav id="primary_nav_wrap" class="sixteen columns">
+		<div id="primary_nav_wrap" class="sixteen columns">
 			<?php wp_nav_menu( array('theme_location' => 'primary_nav' , 'menu_id' => 'primary_nav' , 'fallback_cb' => 'fallback_menu' , 'container' => false )); ?>
-		</nav>
-	</header>
+		</div>
+	</div>
