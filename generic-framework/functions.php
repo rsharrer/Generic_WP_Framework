@@ -38,8 +38,8 @@ function genericfw_styles() {
 }
 
 add_action( 'wp_head', create_function( '',
-   'echo \'<!--[if lt IE 9]><script src="'.get_template_directory_uri().'/js/html5.js"></script><![endif]-->\';'
-) );
+	'echo \'<!--[if lt IE 9]><script src="'.get_template_directory_uri().'/js/html5.js"></script><![endif]-->\';'
+	) );
 
 function genericfw_editor_styles() {
 	add_editor_style( 'stylesheets/editor-style.css' );
@@ -60,8 +60,8 @@ function genericfw_menus() {
 		array(
 			'primary_nav' => ( 'Primary Menu' ),
 			'footer_nav' => ( 'Footer Menu' )
-		)
-	);
+			)
+		);
 }
 
 function fallback_menu(){
@@ -72,20 +72,19 @@ function fallback_menu(){
 add_filter( 'widget_text', 'do_shortcode' );
 
 // Add Shortcodes
-
 function genericfw_btnshortcode($atts, $content = null) {
 	extract(shortcode_atts(array(
-		"link"  => '',
+		"link"  => '#',
 		"type"  => '',
 		"color" => '',
-	), $atts));
+		), $atts));
 	return '<a href="'.$link.'" class="btn '.$color.' '.$type.'">'.$content.'</a>';
 }
 add_shortcode("btn", "genericfw_btnshortcode");
 
 function genericfw_groupbtnshortcode($atts, $content = null) {
 	extract(shortcode_atts(array(
-	), $atts));
+		), $atts));
 	return '<div class="btn-group">'.do_shortcode($content).'</div>';
 }
 add_shortcode("btn-group", "genericfw_groupbtnshortcode");
@@ -94,14 +93,14 @@ add_shortcode("btn-group", "genericfw_groupbtnshortcode");
 function genericfw_widgets() {
 
 	register_sidebar( array(
-	'name' => 'Sidebar',
-	'id' => 'main-sidebar',
-	'description' => 'Widgets for the main sidebar.',
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div>',
-	'before_title' => '<h3 class="widget-title">',
-	'after_title' => '</h3>'
-	));
+		'name' => 'Sidebar',
+		'id' => 'main-sidebar',
+		'description' => 'Widgets for the main sidebar.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+		));
 }
 add_action( 'widgets_init', 'genericfw_widgets' );
 
@@ -114,10 +113,10 @@ function genericfw_theme_customizer( $wp_customize ) {
 		) );
 
 	$wp_customize->add_section( 'genericfw_layout_section' , array(
-	'title'       => __( 'Layout Settings', 'genericfw' ),
-	'priority'    => 35,
-	'description' => 'Content plus Sidebar should equal 16',
-	) );
+		'title'       => __( 'Layout Settings', 'genericfw' ),
+		'priority'    => 35,
+		'description' => 'Content plus Sidebar should equal 16',
+		) );
 
 	// Logo Upload
 	$wp_customize->add_setting( 'genericfw_logo' );
@@ -197,104 +196,104 @@ function genericfw_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genericfw_contentwidth',
 		array(
-		'default' => 'eleven',
-		'capability' => 'edit_theme_options',
-		));
+			'default' => 'eleven',
+			'capability' => 'edit_theme_options',
+			));
 
 	$wp_customize->add_control( 
 		'genericfw_contentwidth',
 		array(
-		'settings' => 'genericfw_contentwidth',
-		'label' => 'Content width in columns:',
-		'section' => 'genericfw_layout_section',
-		'type' => 'select',
-		'choices' => array(
-			'one' => 'One',
-			'two' => 'Two',
-			'three' => 'Three',
-			'four' => 'Four',
-			'five' => 'Five',
-			'six' => 'Six',
-			'seven' => 'Seven',
-			'eight' => 'Eight',
-			'nine' => 'Nine',
-			'ten' => 'Ten',
-			'eleven' => 'Eleven',
-			'twelve' => 'Twelve',
-			'thirteen' => 'Thirteen',
-			'fourteen' => 'Fourteen',
-			'fifteen' => 'Fifteen',
-			'sixteen' => 'Sixteen',
-			),
+			'settings' => 'genericfw_contentwidth',
+			'label' => 'Content width in columns:',
+			'section' => 'genericfw_layout_section',
+			'type' => 'select',
+			'choices' => array(
+				'one' => 'One',
+				'two' => 'Two',
+				'three' => 'Three',
+				'four' => 'Four',
+				'five' => 'Five',
+				'six' => 'Six',
+				'seven' => 'Seven',
+				'eight' => 'Eight',
+				'nine' => 'Nine',
+				'ten' => 'Ten',
+				'eleven' => 'Eleven',
+				'twelve' => 'Twelve',
+				'thirteen' => 'Thirteen',
+				'fourteen' => 'Fourteen',
+				'fifteen' => 'Fifteen',
+				'sixteen' => 'Sixteen',
+				),
+			));
+
+	// Content Custom Classes
+	$wp_customize->add_setting('genericfw_customcontentclass', array(
+		'default' => '',
+		'capability' => 'edit_theme_options',
 		));
 
-// Content Custom Classes
-$wp_customize->add_setting('genericfw_customcontentclass', array(
-'default' => '',
-'capability' => 'edit_theme_options',
-));
- 
-$wp_customize->add_control('genericfw_customcontentclass', array(
-'label' => __('Add custom Class(es) to #content div', 'genericfw'),
-'section' => 'genericfw_layout_section',
-'settings' => 'genericfw_customcontentclass',
-));
+	$wp_customize->add_control('genericfw_customcontentclass', array(
+		'label' => __('Add custom Class(es) to #content div', 'genericfw'),
+		'section' => 'genericfw_layout_section',
+		'settings' => 'genericfw_customcontentclass',
+		));
 
 	// Sidebar Width
 	$wp_customize->add_setting(
 		'genericfw_sidebarwidth',
 		array(
-		'default' => 'five',
-		'capability' => 'edit_theme_options',
-		));
+			'default' => 'five',
+			'capability' => 'edit_theme_options',
+			));
 
 	$wp_customize->add_control( 
 		'genericfw_sidebarwidth',
 		array(
-		'settings' => 'genericfw_sidebarwidth',
-		'label' => 'Sidebar width in columns:',
-		'section' => 'genericfw_layout_section',
-		'type' => 'select',
-		'choices' => array(
-			'one' => 'One',
-			'two' => 'Two',
-			'three' => 'Three',
-			'four' => 'Four',
-			'five' => 'Five',
-			'six' => 'Six',
-			'seven' => 'Seven',
-			'eight' => 'Eight',
-			'nine' => 'Nine',
-			'ten' => 'Ten',
-			'eleven' => 'Eleven',
-			'twelve' => 'Twelve',
-			'thirteen' => 'Thirteen',
-			'fourteen' => 'Fourteen',
-			'fifteen' => 'Fifteen',
-			'sixteen' => 'Sixteen',
-			),
-		));
+			'settings' => 'genericfw_sidebarwidth',
+			'label' => 'Sidebar width in columns:',
+			'section' => 'genericfw_layout_section',
+			'type' => 'select',
+			'choices' => array(
+				'one' => 'One',
+				'two' => 'Two',
+				'three' => 'Three',
+				'four' => 'Four',
+				'five' => 'Five',
+				'six' => 'Six',
+				'seven' => 'Seven',
+				'eight' => 'Eight',
+				'nine' => 'Nine',
+				'ten' => 'Ten',
+				'eleven' => 'Eleven',
+				'twelve' => 'Twelve',
+				'thirteen' => 'Thirteen',
+				'fourteen' => 'Fourteen',
+				'fifteen' => 'Fifteen',
+				'sixteen' => 'Sixteen',
+				),
+			));
 
 // Text Input
-$wp_customize->add_setting('genericfw_customsidebarclass', array(
-'default' => '',
-'capability' => 'edit_theme_options',
-));
- 
-$wp_customize->add_control('genericfw_customsidebarclass', array(
-'label' => __('Add custom Class(es) to #sidebar div', 'genericfw'),
-'section' => 'genericfw_layout_section',
-'settings' => 'genericfw_customsidebarclass',
-));
+	$wp_customize->add_setting('genericfw_customsidebarclass', array(
+		'default' => '',
+		'capability' => 'edit_theme_options',
+		));
+
+	$wp_customize->add_control('genericfw_customsidebarclass', array(
+		'label' => __('Add custom Class(es) to #sidebar div', 'genericfw'),
+		'section' => 'genericfw_layout_section',
+		'settings' => 'genericfw_customsidebarclass',
+		));
 
 }
 add_action('customize_register', 'genericfw_theme_customizer');
 
 add_action('admin_print_footer_scripts','genericfw_quicktags');
 function genericfw_quicktags() {
-?>
-<script type="text/javascript" charset="utf-8">
-QTags.addButton( 'eg_pre', 'clear','<br class="clear">' );
-</script>
-<?php
+	?>
+	<script type="text/javascript" charset="utf-8">
+		QTags.addButton( 'eg_pre', 'clear','<br class="clear">' );
+	</script>
+	<?php
 }

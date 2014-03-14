@@ -97,16 +97,16 @@ header#header {
 }
 
 #site-title, #site-title a {
-    font-size: 46px;
-    line-height: 50px;
-    font-family: "Georgia","Times New Roman",serif;
-    text-decoration: none;
-    display: block;
+	font-size: 46px;
+	line-height: 50px;
+	font-family: "Georgia","Times New Roman",serif;
+	text-decoration: none;
+	display: block;
 }
 
 #site-title img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /* == FOOTER ==*/
@@ -279,9 +279,9 @@ img.aligncenter {
 }
 
 .aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .wp-caption-text{
@@ -305,8 +305,8 @@ img.aligncenter {
 
 /* == LIST == */
 ul {
-    list-style: disc outside none;
-    margin-left: 30px;
+	list-style: disc outside none;
+	margin-left: 30px;
 }
 
 /* == UI == */
@@ -319,13 +319,13 @@ ul {
 	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 	padding:10px 15px;
 	line-height:100%;
-  height: auto;
+	height: auto;
 	display:inline-block;
 	text-align:center;
 	background-color:#DDDDDD;
 }
 
-p .btn{
+article .btn{
   margin-top: 10px;
 }
 
@@ -413,32 +413,32 @@ p .btn{
   input[type="submit"],
   input[type="reset"],
   input[type="button"] {
-    background: #DDDDDD;
-    border: none;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    color: #333;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    text-shadow: none;
-    text-align: center;
-    cursor: pointer;
-    margin-bottom: 20px;
-    line-height: 100% !important;
-    padding: 9px 15px;
-    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+	background: #DDDDDD;
+	border: none;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	color: #333;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: none;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 20px;
+	line-height: 100% !important;
+	padding: 9px 15px;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
   .button:hover,
   button:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover {
-    color: #333;
-    background: #F6F6F6;
-    border: none;
+	color: #333;
+	background: #F6F6F6;
+	border: none;
 }
 
   .button:active,
@@ -446,25 +446,25 @@ p .btn{
   input[type="submit"]:active,
   input[type="reset"]:active,
   input[type="button"]:active {
-    border: none;
-    background:#F6F6F6;
-    }
+	border: none;
+	background:#F6F6F6;
+	}
 
   .button.full-width,
   button.full-width,
   input[type="submit"].full-width,
   input[type="reset"].full-width,
   input[type="button"].full-width {
-    width: 100%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    text-align: center; }
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	text-align: center; }
 
   /* Fix for odd Mozilla border & padding issues */
   button::-moz-focus-inner,
   input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+	border: 0;
+	padding: 0;
   }
 
 /* == MISC == */
@@ -488,15 +488,15 @@ p .btn{
 /* #Tablet (Portrait)
 ================================================== */
 
-    /* Note: Design for a width of 768px */
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
+	/* Note: Design for a width of 768px */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
 
-    }
+	}
 
 /*  #Mobile (Portrait)
 ================================================== */
-    /* Note: Design for a width of 320px */
-    @media only screen and (max-width: 767px) {
+	/* Note: Design for a width of 320px */
+	@media only screen and (max-width: 767px) {
 
 .align-left {
 	display: block;
@@ -515,12 +515,12 @@ p .btn{
 	visibility: hidden;
 }
 
-    }
+	}
 
 /* #Mobile (Landscape)
 ================================================== */
-    /* Note: Design for a width of 480px */
+	/* Note: Design for a width of 480px */
 
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
 	
-    }
+	}
