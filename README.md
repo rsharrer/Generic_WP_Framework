@@ -66,9 +66,7 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
  * Add custom classes to sidebar and content area
  * .button and submit input styled to resemble the Generic Framework style
  * Added normalize.css for better cross browser support
- * Removed HTML5 Tags such as <header> and <footer>
-  * replaced with divs for better legacy browser compatibility.
-  * May affect child themes, replace header#header and footer#footer tags with #header and #footer tags.
+ * Removed HTML5 Tags such as <header> and <footer>, replaced with divs for better legacy browser compatibility. May affect child themes, replace header#header and footer#footer tags with #header and #footer tags.
 
 ### Generic Framework is built with the following resources: 
 
