@@ -71,6 +71,25 @@ function fallback_menu(){
 // Make shortcodes with in widgets
 add_filter( 'widget_text', 'do_shortcode' );
 
+// Add Shortcodes
+
+function genericfw_btnshortcode($atts, $content = null) {
+	extract(shortcode_atts(array(
+		"link"  => '',
+		"type"  => '',
+		"color" => '',
+	), $atts));
+	return '<a href="'.$link.'" class="btn '.$color.' '.$type.'">'.$content.'</a>';
+}
+add_shortcode("btn", "genericfw_btnshortcode");
+
+function genericfw_groupbtnshortcode($atts, $content = null) {
+	extract(shortcode_atts(array(
+	), $atts));
+	return '<div class="btn-group">'.do_shortcode($content).'</div>';
+}
+add_shortcode("btn-group", "genericfw_groupbtnshortcode");
+
 // Sidebar
 function genericfw_widgets() {
 
@@ -270,3 +289,12 @@ $wp_customize->add_control('genericfw_customsidebarclass', array(
 
 }
 add_action('customize_register', 'genericfw_theme_customizer');
+
+add_action('admin_print_footer_scripts','genericfw_quicktags');
+function genericfw_quicktags() {
+?>
+<script type="text/javascript" charset="utf-8">
+QTags.addButton( 'eg_pre', 'clear','<br class="clear">' );
+</script>
+<?php
+}
