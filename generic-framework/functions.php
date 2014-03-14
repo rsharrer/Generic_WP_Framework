@@ -96,7 +96,7 @@ function genericfw_theme_customizer( $wp_customize ) {
 
 	$wp_customize->add_section( 'genericfw_layout_section' , array(
 	'title'       => __( 'Layout Settings', 'genericfw' ),
-	'priority'    => 30,
+	'priority'    => 35,
 	'description' => 'Content plus Sidebar should equal 16',
 	) );
 
