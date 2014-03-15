@@ -492,6 +492,35 @@ article .btn{
 
 .bypostauthor{}
 
+div.error{
+	-moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	background: #fcfcfc;
+	border-left:4px solid #E53C38;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	line-height: 26px;
+	padding: 8px 12px;
+}
+
+div.error .genericon{
+	font-size: 18px;
+	line-height: 26px;
+	margin-right: 4px;
+	width: auto;
+}
+
+div.error .btn{
+	-moz-box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 0 rgba(0, 0, 0, 0.08);
+	-webkit-box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 0 rgba(0, 0, 0, 0.08);
+	background: #F7F7F7;
+	border:1px solid #CCCCCC;
+	box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 0 rgba(0, 0, 0, 0.08);
+	color: #555555;
+	font-weight: normal;
+	line-height: 26px;
+	padding: 0 10px 1px;
+}
+
 .search-field{ width: 98%; }
 
 

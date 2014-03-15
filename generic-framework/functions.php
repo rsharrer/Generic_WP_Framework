@@ -65,7 +65,7 @@ function genericfw_menus() {
 }
 
 function fallback_menu(){
-	if ( is_user_logged_in() ) {echo 'Please assign a menu in the admin area.';}
+	if ( is_user_logged_in() ) {echo '<div class="error"><div class="genericon genericon-warning"></div> <strong>No Menu Assigned.</strong> <a href="./wp-admin/nav-menus.php" class="btn round">Go to Menus</a></div>';}
 }
 
 // Make shortcodes with in widgets
