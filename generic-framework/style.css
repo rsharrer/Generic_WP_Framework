@@ -56,6 +56,10 @@ body {
 	margin-bottom: 50px;
 }
 
+#content article.post:not(:first-child){
+	margin-bottom: 0;
+}
+
 .meta-info {
 	padding: 10px 0;
 	font-size: 12px;
