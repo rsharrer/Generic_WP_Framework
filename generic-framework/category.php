@@ -5,7 +5,7 @@
 			<?php get_template_part( 'loop', 'index' ); ?>
 		</div>
 
-		<div id="sidebar" class="<?php echo get_theme_mod( 'genericfw_contentwidth', 'five' ); ?> columns <?php echo get_theme_mod( 'genericfw_customsidebarclass' ); ?>">
+		<div id="sidebar" class="<?php echo get_theme_mod( 'genericfw_sidebarwidth', 'five' ); ?> columns <?php echo get_theme_mod( 'genericfw_customsidebarclass' ); ?>">
 			<?php get_sidebar(); ?>
 		</div>
 	</div>
