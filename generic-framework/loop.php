@@ -1,7 +1,7 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-					<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<h1 class="post-title entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
 					<?php $fullorexc = get_theme_mod( 'genericfw_fullorexcerpt' );
 								if( $fullorexc != '' ) {
@@ -20,9 +20,9 @@
 					<br class="clear" />
 					<div class="meta-info"> 
 						<div class="align-left">
-							By <?php the_author_posts_link(); ?> | 
+							By <span class="author"><?php the_author_posts_link(); ?></span> | 
 							<?php echo get_the_date(); ?> |
-							<?php the_category(', '); ?><?php the_tags( ' | ', ', ', ' | ' ); ?>
+							<span class="postmetadata"><?php the_category(', '); ?><?php the_tags( ' | ', ', ', ' | ' ); ?></span>
 							<?php $disable_comments = get_theme_mod( 'genericfw_postcom' );
 								if( $disable_comments != '' ) {
 									switch ( $disable_comments ) {

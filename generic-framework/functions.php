@@ -65,7 +65,7 @@ function genericfw_menus() {
 }
 
 function fallback_menu(){
-	if ( is_user_logged_in() ) {echo '<div class="error"><div class="genericon genericon-warning"></div> <strong>No Menu Assigned.</strong> <a href="'.$url = admin_url().'/wp-admin/nav-menus.php" class="btn round">Go to Menus</a></div>';}
+	if ( is_user_logged_in() ) {echo '<div class="error"><div class="genericon genericon-warning"></div> <strong>No Menu Assigned.</strong> <a href="'.$url = admin_url().'nav-menus.php" class="btn round">Go to Menus</a></div>';}
 }
 
 // Make shortcodes with in widgets
@@ -77,8 +77,9 @@ function genericfw_btnshortcode($atts, $content = null) {
 		"link"  => '#',
 		"type"  => '',
 		"color" => '',
+		"target" => '',
 		), $atts));
-	return '<a href="'.$link.'" class="btn '.$color.' '.$type.'">'.do_shortcode($content).'</a>';
+	return '<a href="'.$link.'" class="btn '.$color.' '.$type.'" target="'.$target.'">'.do_shortcode($content).'</a>';
 }
 add_shortcode("btn", "genericfw_btnshortcode");
 
