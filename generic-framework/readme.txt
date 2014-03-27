@@ -31,6 +31,8 @@ Copyright: @afarkas @jdalton @jon_neal @rem
 normalize.css v3.0.0 - http://git.io/normalize/
 License: MIT License
 
+Kubrik - comments.php inspiration
+
 == Installation ==
 
 1. Upload the `generic-fw` folder to the `/wp-content/themes/` directory

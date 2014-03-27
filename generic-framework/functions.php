@@ -71,25 +71,6 @@ function fallback_menu(){
 // Make shortcodes with in widgets
 add_filter( 'widget_text', 'do_shortcode' );
 
-// Add Shortcodes
-function genericfw_btnshortcode($atts, $content = null) {
-	extract(shortcode_atts(array(
-		"link"  => '#',
-		"type"  => '',
-		"color" => '',
-		"target" => '',
-		), $atts));
-	return '<a href="'.$link.'" class="btn '.$color.' '.$type.'" target="'.$target.'">'.do_shortcode($content).'</a>';
-}
-add_shortcode("btn", "genericfw_btnshortcode");
-
-function genericfw_groupbtnshortcode($atts, $content = null) {
-	extract(shortcode_atts(array(
-		), $atts));
-	return '<div class="btn-group">'.do_shortcode($content).'</div>';
-}
-add_shortcode("btn-group", "genericfw_groupbtnshortcode");
-
 // Sidebar
 function genericfw_widgets() {
 

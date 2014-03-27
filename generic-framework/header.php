@@ -11,7 +11,7 @@
 <head>
 	<!-- Basic Page Needs
   ================================================== -->
-	<meta charset="utf-8">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<title><?php wp_title('|',true,'right'); ?></title>
 
 	<!-- Mobile Specific Metas
