@@ -24,13 +24,11 @@ function genericfw_styles() {
 	wp_register_style( 'normalize', get_template_directory_uri() . '/stylesheets/normalize.css', '', '3.0.0' );
 	wp_register_style( 'skeleton-style', get_template_directory_uri() . '/stylesheets/skeleton.css', '', '1.2');
 	wp_register_style( 'skeleton-base', get_template_directory_uri() . '/stylesheets/base.css' , '', '1.2');
-	wp_register_style( 'skeleton-layout', get_template_directory_uri() . '/stylesheets/layout.css' , '', '1.2');
 
 	wp_enqueue_style( 'normalize' );
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'skeleton-base', 'skeleton-style', 'skeleton-layout' ), '0.9.80' );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'skeleton-base', 'skeleton-style' ), '0.9.80' );
 	wp_enqueue_style( 'skeleton-style' );
 	wp_enqueue_style( 'skeleton-base' );
-	wp_enqueue_style( 'skeleton-layout' );
 	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 
 	wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '', TRUE); 

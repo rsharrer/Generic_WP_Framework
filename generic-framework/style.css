@@ -493,8 +493,8 @@ article .btn{
 .add-top{margin-top: 20px !important;}
 .half-top{margin-top: 10px !important;}
 .remove-top{ margin-top: 0 !important; }
-.align-left, .columns.align-left{ display: inline; float: left; margin-right: 15px; }
-.align-right, .columns.align-right{ display: inline; float: right; margin-left: 15px; }
+.align-left, .columns.align-left, .column.align-left{ display: inline; float: left; margin-right: 15px; }
+.align-right, .columns.align-right, .column.align-right{ display: inline; float: right; margin-left: 15px; }
 .alpha.align-right{ margin-left: 0;}
 .omega.align-left{ margin-right: 0;}
 
