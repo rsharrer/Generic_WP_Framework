@@ -70,6 +70,10 @@ I personally recommend using a Child Theme as that is the best way to rapidly de
 * V:0.9.84
  * Added shortcodes for buttons
  * Cleaned up buttons inside of p tags
+* V:0.9.86
+ * Removed shortcodes (WordPress complience won't let me)
+ * Minor bug fixes
+ * Added Verticle-Divider class, add to a div surrounding columns to add dividers.
 
 ### Generic Framework is built with the following resources: 
 
