@@ -273,7 +273,7 @@ add_action('admin_print_footer_scripts','genericfw_quicktags');
 function genericfw_quicktags() {
 	?>
 	<script type="text/javascript" charset="utf-8">
-		QTags.addButton( 'eg_pre', 'clear','<br class="clear">' );
+		QTags.addButton( 'eg_pre', 'clear','<br class="clear"/>' );
 	</script>
 	<?php
 }
