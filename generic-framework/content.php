@@ -1,4 +1,4 @@
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<h1 class="post-title entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -39,18 +39,3 @@
 						<div class="align-right"><a href="<?php the_permalink(); ?>">Read More</a></div>
 					</div>
 				</article>
-
-			<?php endwhile; ?>
-
-				<div class="navigation">
-					<div class="next-posts align-right"><?php next_posts_link(); ?></div>
-					<div class="prev-posts aligh-left"><?php previous_posts_link(); ?></div>
-				</div>
-
-			<?php else : ?>
-
-			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-				<h1>Not Found</h1>
-			</div>
-
-			<?php endif; ?>
