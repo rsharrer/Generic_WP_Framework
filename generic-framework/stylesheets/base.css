@@ -206,7 +206,8 @@
 
 	table { 
 		width: 100%;
-		border-collapse: collapse; }
+		border-collapse: collapse;
+		margin-bottom: 20px; }
 /* Zebra striping */
 	tr:nth-of-type(even) { 
 		background: #F6F6F6; }
@@ -440,26 +441,26 @@ article .btn{
 
 	form {
 		margin-bottom: 20px; }
-	fieldset {
-		margin-bottom: 20px; }
 	input[type="text"],
 	input[type="password"],
-	input[type="email"],
+	input[type="email"],input[type="tel"],
 	textarea,
 	select {
 		border: 1px solid #ccc;
 		padding: 6px 4px;
 		outline: none;
-		-moz-border-radius: 2px;
-		-webkit-border-radius: 2px;
-		border-radius: 2px;
-		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+		font-size: 13px;
+		font-family: sans-serif;
 		color: #777;
 		margin: 0;
-		width: 210px;
-		max-width: 100%;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 100%;
 		display: block;
-		margin-bottom: 20px;
 		background: #fff; }
 	select {
 		padding: 0; }

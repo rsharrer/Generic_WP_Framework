@@ -1,5 +1,5 @@
 <?php
-// The main template file.
+// The page template file.
 get_header(); ?>
 
 <div id="primary" class="container content-area">

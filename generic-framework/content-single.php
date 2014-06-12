@@ -1,41 +1,24 @@
-				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-					<h1 class="post-title entry-title"><?php the_title(); ?></h1>
-					<?php the_content(); ?>
-					<?php wp_link_pages(); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+	<div class="entry-content">
+		<?php the_content(); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'sproket-framework' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
 
-					<div class="meta-info"> 
-						<div class="align-left">
-							By <span class="author"><?php the_author_posts_link(); ?></span> | 
-							<?php echo get_the_date(); ?> |
-							<span class="postmetadata"><?php the_category(', '); ?><?php the_tags( ' | ', ', ', ' | ' ); ?></span>
-							<?php $disable_comments = get_theme_mod( 'genericfw_postcom' );
-								if( $disable_comments != '' ) {
-									switch ( $disable_comments ) {
-									case 'yes':
-									break;
-									case 'no':
-									echo ' | ';
-									comments_popup_link('0 Comments', '1 Comment', '% Comments');
-									break;
-									}
-								}
-							?>
-						</div>
-					</div>
-					<br class="clear" />
+	<footer class="entry-footer">
+		<span class="author-link">By <?php the_author_posts_link(); ?> |</span>
+		<span class="cat-links"><?php the_category(', '); ?></span>
+		<span class="tags-links"><?php the_tags( ' | ', ', ', '' ); ?></span>
+		<span class="align-right readmore-link"><a href="<?php the_permalink(); ?>">Read More &#10095;</a></span>
+	</footer><!-- .entry-footer -->
 
-				<!-- Commments -->
-				<?php
-					$disable_comments = get_theme_mod( 'genericfw_postcom' );
-						if( $disable_comments != '' ) {
-				        	switch ( $disable_comments ) {
-				            	case 'yes':
-				                break;
-				            	case 'no':
-				            		comments_template();
-				                break;
-				        		}
-				    		}
-				?>
+	<?php comments_template(); ?>
 
-				</article>
+</article>

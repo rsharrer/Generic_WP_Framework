@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+// 404 Page
+get_header(); ?>
 
 <div id="primary" class="container content-area">
 	<main id="main" class="sixteen columns site-main" role="main">

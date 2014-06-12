@@ -1,4 +1,5 @@
 		</div><!-- #content -->
+		
 		<footer id="footer" class="site-footer" role="contentinfo">
 			<div class="container">
 				<div class="sixteen columns">

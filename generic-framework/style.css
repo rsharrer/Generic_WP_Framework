@@ -31,21 +31,13 @@ pre {
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-.post-title ,.post-title a {
-	text-decoration: none;
-}
-
-.sticky .post-title a {
-	text-decoration: underline;
-}
-
 /* == LAYOUT == */
 
 #primary {
 	padding: 20px 0;
 }
 
-.meta-info {
+.entry-footer {
 	padding: 10px 0;
 	font-size: 12px;
 	border-bottom: 1px solid #DDDDDD;
@@ -60,14 +52,6 @@ pre {
 	float: left;
 	width: 100%;
 	margin-bottom: 15px;
-}
-
-.sidebar ul ul ul ul {
-	display: none;
-}
-
-#respond {
-	margin-top: 15px;
 }
 
 /* == HEADER ==*/
@@ -87,11 +71,9 @@ pre {
 
 /* == FOOTER ==*/
 
-#footer {
+.site-footer {
   padding: 20px 0 40px;
 }
-
-/* depreciated */
 
 #footer_menu ul {
 	margin: 0;

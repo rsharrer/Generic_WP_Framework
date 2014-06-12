@@ -1,21 +1,14 @@
-				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-					<h1 class="post-title entry-title"><?php the_title(); ?></h1>
-					<?php the_content(); ?>
-					<?php wp_link_pages(); ?>
-					<br class="clear" />
-					
-					<!-- Commments -->
-					<?php
-						$disable_comments = get_theme_mod( 'genericfw_pagecom' );
-							if( $disable_comments != '' ) {
-					        	switch ( $disable_comments ) {
-					            	case 'yes':
-					                break;
-					            	case 'no':
-					            		comments_template();
-					                break;
-					        		}
-					    		}
-					?>
-
-				</article>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+	<div class="entry-content">
+		<?php the_content(); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'sproket-framework' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
+</article>

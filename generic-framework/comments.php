@@ -1,3 +1,4 @@
+<div id="comments" class="comments-area">
 <?php
 /**
  *
@@ -12,7 +13,7 @@
  
 // ##########  Do not delete these lines
 if ( post_password_required() ) { ?>
-    <p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'kubrick'); ?></p>
+    <p class="no-comments"><?php _e('This post is password protected. Enter the password to view comments.', 'kubrick'); ?></p>
 <?php
     return; }
 // ##########  End do not delete section
@@ -20,9 +21,9 @@ if ( post_password_required() ) { ?>
 // Display Comments Section
 if ( have_comments() ) : ?>
     <h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses');?> <?php printf('to %s', the_title('', '', false)); ?></h3>
-        <div class="navigation">
-            <div class="alignleft"><?php previous_comments_link() ?></div>
-            <div class="alignright"><?php next_comments_link() ?></div>
+        <div class="comment-navigation">
+            <div class="align-left"><?php previous_comments_link() ?></div>
+            <div class="align-right"><?php next_comments_link() ?></div>
         </div>
     <ol class="commentlist">
      <?php
@@ -38,13 +39,13 @@ if ( have_comments() ) : ?>
       ));
       ?>
     </ol>
-        <div class="navigation">
-            <div class="alignleft"><?php previous_comments_link() ?></div>
-            <div class="alignright"><?php next_comments_link() ?></div>
+        <div class="comment-navigation">
+            <div class="align-left"><?php previous_comments_link() ?></div>
+            <div class="align-right"><?php next_comments_link() ?></div>
         </div>
     <?php
     if ( ! comments_open() ) : // There are comments but comments are now closed
-        echo"<p class='nocomments'>Comments are closed.</p>";
+        echo"<p class='no-comments'>Comments are closed.</p>";
     endif;
  
 else : // I.E. There are no Comments
@@ -66,3 +67,4 @@ comment_form(array(
   ));
  
 ?>
+</div>
