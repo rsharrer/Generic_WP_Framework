@@ -12,11 +12,8 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php// get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'content', 'none' ); ?>
 
-			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-				<h1>Not Found</h1>
-			</div>
 		<?php endif; ?>
 	</main>
 

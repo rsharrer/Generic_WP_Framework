@@ -1,5 +1,16 @@
 <?php
 
+/* Table of Content
+==================================================
+	SETUP
+	STYLES AND SCRIPTS
+	MENUS
+	WIDGETS AND SIDEBARS
+	MISC
+	INC IMPORTS
+*/
+
+// SETUP
 function genericfw_setup(){
 	if ( ! isset( $content_width ) ) $content_width = 960;
 	add_theme_support('post-thumbnails');
@@ -16,23 +27,7 @@ function genericfw_setup(){
 }
 add_action( 'after_setup_theme', 'genericfw_setup' );
 
-// BROWSER DETECTION
-add_filter('body_class','browser_body_class');
-function browser_body_class($classes) {
-	global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
-
-	if($is_lynx) $classes[] = 'lynx';
-	elseif($is_gecko) $classes[] = 'firefox';
-	elseif($is_opera) $classes[] = 'opera';
-	elseif($is_NS4) $classes[] = 'ns4';
-	elseif($is_safari) $classes[] = 'safari';
-	elseif($is_chrome) $classes[] = 'chrome';
-	elseif($is_IE) $classes[] = 'ie';
-	else $classes[] = 'unknown';
-
-	if($is_iphone) $classes[] = 'iphone';
-	return $classes;
-}
+// STYLES AND SCRIPTS
 
 // Register Style
 function genericfw_styles() {
@@ -77,7 +72,7 @@ function genericfw_editor_styles() {
 }
 add_action( 'init', 'genericfw_editor_styles' );
 
-// Menus
+// MENUS
 add_action( 'after_setup_theme', 'genericfw_menus' );
 function genericfw_menus() {
 	register_nav_menus(
@@ -92,10 +87,7 @@ function fallback_menu(){
 	if ( is_user_logged_in() ) {echo '<div class="error"><div class="genericon genericon-warning"></div> <strong>No Menu Assigned.</strong> <a href="'.$url = admin_url().'nav-menus.php" class="btn round">Go to Menus</a></div>';}
 }
 
-// Make shortcodes with in widgets
-add_filter( 'widget_text', 'do_shortcode' );
-
-// Sidebar
+// WIDGETS AND SIDEBARS
 function genericfw_widgets() {
 
 	register_sidebar( array(
@@ -109,6 +101,29 @@ function genericfw_widgets() {
 		));
 }
 add_action( 'widgets_init', 'genericfw_widgets' );
+
+// MISC
+
+// BROWSER DETECTION
+add_filter('body_class','browser_body_class');
+function browser_body_class($classes) {
+	global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
+
+	if($is_lynx) $classes[] = 'lynx';
+	elseif($is_gecko) $classes[] = 'firefox';
+	elseif($is_opera) $classes[] = 'opera';
+	elseif($is_NS4) $classes[] = 'ns4';
+	elseif($is_safari) $classes[] = 'safari';
+	elseif($is_chrome) $classes[] = 'chrome';
+	elseif($is_IE) $classes[] = 'ie';
+	else $classes[] = 'unknown';
+
+	if($is_iphone) $classes[] = 'iphone';
+	return $classes;
+}
+
+// Make shortcodes with in widgets
+add_filter( 'widget_text', 'do_shortcode' );
 
 function numeric_posts_nav() {
 
@@ -179,12 +194,10 @@ function numeric_posts_nav() {
 
 }
 
-/**
- * Load Jetpack compatibility file.
- */
+// INC IMPORTS
+
+//Load Jetpack compatibility file.
 require get_template_directory() . '/inc/jetpack.php';
 
-/**
- * Customizer additions.
- */
+//Customizer additions.
 require get_template_directory() . '/inc/customizer.php';
