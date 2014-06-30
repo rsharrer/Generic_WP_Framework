@@ -61,10 +61,8 @@
 				</div>
 			</div>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="container">
-					<div id="main-navigation" class="align-left">
-						<?php wp_nav_menu( array('theme_location' => 'primary_nav' , 'menu_id' => 'primary_nav' , 'fallback_cb' => 'fallback_menu' , 'container' => false )); ?>
-					</div>
+				<div id="main-navigation" class="container">
+					<?php wp_nav_menu( array('theme_location' => 'primary_nav' , 'menu_id' => 'primary_nav' , 'fallback_cb' => 'fallback_menu' , 'container' => false )); ?>
 				</div>
 			</nav><!-- site-navigation -->
 		</header><!-- #header -->

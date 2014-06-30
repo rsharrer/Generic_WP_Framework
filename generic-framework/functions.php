@@ -43,7 +43,8 @@ function genericfw_styles() {
 
 	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'skeleton-base', 'skeleton-style' ), '0.9.80' );
+	wp_register_style( 'theme_name', get_stylesheet_uri(), array( 'normalize', 'skeleton-style', 'skeleton-base' ));
+	wp_enqueue_style( 'generic_framework', get_stylesheet_uri() );
 }
 
 // Hook into the 'wp_enqueue_scripts' action
