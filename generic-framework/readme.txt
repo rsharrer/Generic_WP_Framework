@@ -4,7 +4,7 @@ Author: Phil Hoyt
 Author URI: https://philhoyt.com
 Theme URI: https://github.com/philhoyt/Generic_WP_Framework.git
 Description: A blank Responsive framework based on getskeleton.com. Built with the intention of making child themes. Theme features include uploading a Logo, Disabling Page and/or Post comments, adjusting sidebar and content area width, and more to come. By default the framework comes with one sidebar and two menu areas (a main navigation and a footer menu), more can be added through a Child Theme. Seriously this theme is super barebones so you can add exactly what features you want! 
-Version: 0.9.86
+Version: 0.9.91
 Tags: responsive-layout, white, right-sidebar, theme-options, full-width-template, gray, 
 License: GPL
 License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -32,10 +32,3 @@ normalize.css v3.0.0 - http://git.io/normalize/
 License: MIT License
 
 Kubrik - comments.php inspiration
-
-== Installation ==
-
-1. Upload the `generic-fw` folder to the `/wp-content/themes/` directory
-Activation and Use
-1. Activate the Theme through the 'Themes' menu in WordPress
-2. See Appearance -> Theme Options to change theme options

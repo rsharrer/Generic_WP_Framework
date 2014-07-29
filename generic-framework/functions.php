@@ -17,13 +17,7 @@ function genericfw_setup(){
 	add_theme_support( 'automatic-feed-links' );
 
 	// Enable support for HTML5 markup.
-	add_theme_support( 'html5', array(
-		'comment-list',
-		'search-form',
-		'comment-form',
-		'gallery',
-		'caption',
-	) );
+	
 }
 add_action( 'after_setup_theme', 'genericfw_setup' );
 
@@ -43,7 +37,7 @@ function genericfw_styles() {
 
 	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 
-	wp_register_style( 'theme_name', get_stylesheet_uri(), array( 'normalize', 'skeleton-style', 'skeleton-base' ));
+	wp_register_style( 'genericfw', get_stylesheet_uri(), array( 'normalize', 'skeleton-style', 'skeleton-base' ));
 	wp_enqueue_style( 'generic_framework', get_stylesheet_uri() );
 }
 
@@ -122,9 +116,6 @@ function browser_body_class($classes) {
 	if($is_iphone) $classes[] = 'iphone';
 	return $classes;
 }
-
-// Make shortcodes with in widgets
-add_filter( 'widget_text', 'do_shortcode' );
 
 function numeric_posts_nav() {
 
