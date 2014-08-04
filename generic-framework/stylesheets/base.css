@@ -100,7 +100,7 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #0077CC; cursor: pointer; text-decoration: none; outline: 0; }
+	a, a:visited { color: #5DADE2; cursor: pointer; text-decoration: none; outline: 0; }
 	a:hover, a:focus { text-decoration: underline; }
 
 /* #Navigation
@@ -249,7 +249,6 @@
 	color:#333333;
 	font-size:12px;
 	font-weight:bold;
-	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 	padding:0 15px;
 	line-height:32px;
 	height: auto;
