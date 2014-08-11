@@ -25,7 +25,7 @@
 
 <?php if ( get_post_type() == 'post') : // Only display Excerpts for Search ?>
 	<footer class="entry-footer">
-		<span class="author-link">By <?php the_author_posts_link(); ?> |</span>
+		<span class="author-link">By <?php the_author_posts_link(); ?> </span> on <?php the_date('F jS, o', '<span class="date">', ' |</span>'); ?>
 		<span class="cat-links"><?php the_category(', '); ?></span>
 		<span class="tags-links"><?php the_tags( ' | ', ', ', '' ); ?></span>
 		<span class="align-right readmore-link"><a href="<?php the_permalink(); ?>">Read More &#10095;</a></span>
