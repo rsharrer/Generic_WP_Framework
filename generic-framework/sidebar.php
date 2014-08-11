@@ -1,7 +1,6 @@
 <?php
 // The Sidebar containing the main widget areas
 ?>
-<div id="sidebar" class="<?php echo get_theme_mod( 'genericfw_sidebarwidth', 'five' ); ?> columns <?php echo get_theme_mod( 'genericfw_customsidebarclass' ); ?>" role="complementary">
 	<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
 		<?php dynamic_sidebar( 'main-sidebar' ); ?>
 	<?php elseif ( is_user_logged_in() ): ?>
@@ -13,4 +12,3 @@
 		</div>
 	<?php else : ?>
 	<?php endif; ?>
-</div>

@@ -8,8 +8,10 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'single' ); ?>
 		<?php endwhile; // end of the loop. ?>
 	</main>
-
-	<?php get_sidebar(); ?>
+	
+	<div id="sidebar" class="<?php echo get_theme_mod( 'genericfw_sidebarwidth', 'five' ); ?> columns <?php echo get_theme_mod( 'genericfw_customsidebarclass' ); ?>" role="complementary">
+		<?php get_sidebar(); ?>
+	</div>
 
 </div><!-- #primary -->
 
